@@ -19,3 +19,6 @@
 - https://developer.apple.com/design/human-interface-guidelines/
 - https://designsystemsrepo.com/
 - https://stripe.com/es-us
+
+## win10
+- https://chrisandriessen.nl/taskbarx
