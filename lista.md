@@ -22,3 +22,12 @@
 
 ## win10
 - https://chrisandriessen.nl/taskbarx
+
+## VS
+- https://marketplace.visualstudio.com/items?itemName=martinw.SmartPaster2013
+- https://marketplace.visualstudio.com/items?itemName=ErikEJ.EFCorePowerTools
+- https://marketplace.visualstudio.com/items?itemName=TeamXavalon.XAMLStyler
+- https://marketplace.visualstudio.com/items?itemName=MadsKristensen.LearntheShortcut
+- https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile
+- https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor
+- http://erikej.github.io/SqlCeToolbox/
