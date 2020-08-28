@@ -31,3 +31,4 @@
 - https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile
 - https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor
 - http://erikej.github.io/SqlCeToolbox/
+- https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ExtensibilityEssentials
