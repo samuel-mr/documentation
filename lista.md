@@ -40,6 +40,13 @@
 https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 
 ## Learn
-https://github.com/danistefanovic/build-your-own-x#build-your-own-3d-renderer
-[Javascript](https://javascript30.com/)
+#### Software
+- [Free Code Camp](https://github.com/florinpop17/app-ideas)
+- [Desde 0](https://github.com/danistefanovic/build-your-own-x)
+- [Javascript 30](https://javascript30.com/)
+
+#### DataScience
+- [16 Data Science Projects with Source Code to Strengthen your Resume](https://data-flair.training/blogs/data-science-project-ideas/)
+- [Top 9 Data Science Projects for a Beginner in 2020](https://towardsdatascience.com/top-9-data-science-projects-for-a-beginner-in-2020-26eb7d42b116?gi=159b758c8f95)
+- [6 Interesting Data Science Project Ideas & Examples](https://www.springboard.com/blog/data-science-projects/)
 
