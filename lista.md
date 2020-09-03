@@ -41,3 +41,5 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 
 ## Learn
 https://github.com/danistefanovic/build-your-own-x#build-your-own-3d-renderer
+[Javascript](https://javascript30.com/)
+
