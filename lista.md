@@ -36,6 +36,9 @@
 - https://www.vsixgallery.com/extension/0c8bd9fa-77d5-4563-ab57-9e01608c3d04#collapseattributes (varios)
 - https://marketplace.visualstudio.com/items?itemName=Diagnostics.DiagnosticsConcurrencyVisualizer2019
 
+## VS extensibility Samples
+- https://github.com/microsoft/VSSDK-Extensibility-Samples
+
 ## MSIX
 https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 
