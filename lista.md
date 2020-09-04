@@ -52,3 +52,12 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 
 ## Music
 - https://orquestacionmidi.com
+
+
+## Shortcut
+//select up scope
+Shift + Alt + +
+//select down scope
+Shift + Alt + -
+//select all similar names
+Shift + Alt + ´
