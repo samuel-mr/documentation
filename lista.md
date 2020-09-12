@@ -35,6 +35,7 @@
 - https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ExtensibilityEssentials2019
 - https://www.vsixgallery.com/extension/0c8bd9fa-77d5-4563-ab57-9e01608c3d04#collapseattributes (varios)
 - https://marketplace.visualstudio.com/items?itemName=Diagnostics.DiagnosticsConcurrencyVisualizer2019
+- https://marketplace.visualstudio.com/items?itemName=stefankert.BuildVision
 
 ## VS extensibility Samples
 - https://github.com/microsoft/VSSDK-Extensibility-Samples
@@ -47,6 +48,7 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 - [Free Code Camp](https://github.com/florinpop17/app-ideas)
 - [Desde 0](https://github.com/danistefanovic/build-your-own-x)
 - [Javascript 30](https://javascript30.com/)
+- https://github.com/TheAlgorithms
 
 #### DataScience
 - [16 Data Science Projects with Source Code to Strengthen your Resume](https://data-flair.training/blogs/data-science-project-ideas/)
@@ -56,6 +58,17 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 ## Music
 - https://orquestacionmidi.com
 
+## Books
+- https://www.kevinrooke.com/book-genres/psychology
+
+## Roadmaps
+- https://roadmap.sh
+
+## Platform Online
+- https://www.microsoft.com/es-xl/latampartneruniversity
+
+## BlazorWeb
+- https://blazorhelpwebsite.com
 
 ## Shortcut
 //select up scope
