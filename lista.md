@@ -49,6 +49,7 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 - [Desde 0](https://github.com/danistefanovic/build-your-own-x)
 - [Javascript 30](https://javascript30.com/)
 - https://github.com/TheAlgorithms
+- https://pragprog.com/titles/jwdsal2/a-common-sense-guide-to-data-structures-and-algorithms-second-edition/
 
 #### DataScience
 - [16 Data Science Projects with Source Code to Strengthen your Resume](https://data-flair.training/blogs/data-science-project-ideas/)
@@ -57,6 +58,8 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 
 ## Architecture
 - https://github.com/ddd-crew/ddd-starter-modelling-process
+- https://github.com/joelparkerhenderson/architecture_decision_record
+- https://martinfowler.com/articles/branching-patterns.html
 
 ## Music
 - https://orquestacionmidi.com
