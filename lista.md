@@ -15,6 +15,8 @@
 - https://github.com/Microsoft/Terminal
 - https://winscp.net/
 
+## Learn helper
+- https://gitmind.com/
 
 ## Design Guidelines
 - https://developer.apple.com/design/human-interface-guidelines/
