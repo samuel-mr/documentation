@@ -57,6 +57,8 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 - https://www.academia.edu/32790423/An%C3%A1lisis_de_Algoritmos_para_Ingenier%C3%ADa_de_Sistemas_y_Computaci%C3%B3n
 - https://jvmr2012.files.wordpress.com/2014/12/manual-analisis-de-algoritmos.pdf
 - http://www.cua.uam.mx/pdfs/conoce/libroselec/Notas_Analisis_AlgoritmosVF.pdf
+- https://github.com/raywenderlich/swift-algorithm-club
+- https://www.campusmvp.es/recursos/post/Ser-mejor-programador-aprendiendo-algoritmos-(y-de-paso-Swift).aspx
 
 #### DataScience
 - [16 Data Science Projects with Source Code to Strengthen your Resume](https://data-flair.training/blogs/data-science-project-ideas/)
