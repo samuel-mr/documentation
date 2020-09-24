@@ -85,6 +85,9 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 ## BlazorWeb
 - https://blazorhelpwebsite.com
 
+## Proyects
+- https://www.juanbarrios.com/algoritmo-para-la-deteccion-del-uso-de-la-mascarilla/
+
 ## Shortcut
 //select up scope
 Shift + Alt + +
