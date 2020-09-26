@@ -75,6 +75,7 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 
 ## Books
 - https://www.kevinrooke.com/book-genres/psychology
+- https://soenglish.me/books-to-learn-english/#ielts
 
 ## Roadmaps
 - https://roadmap.sh
