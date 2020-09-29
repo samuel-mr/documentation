@@ -88,6 +88,7 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 
 ## Proyects
 - https://www.juanbarrios.com/algoritmo-para-la-deteccion-del-uso-de-la-mascarilla/
+- https://ekobit.com/blog/designing-an-entity-attribute-value-model-with-ef-core/ 
 
 ## Shortcut
 //select up scope
