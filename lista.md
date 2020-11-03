@@ -78,6 +78,7 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 - https://soenglish.me/books-to-learn-english/#ielts
 
 ## Roadmaps
+- https://github.com/MoienTajik/AspNetCore-Developer-Roadmap
 - https://roadmap.sh
 
 ## Platform Online
@@ -89,6 +90,9 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 ## Proyects
 - https://www.juanbarrios.com/algoritmo-para-la-deteccion-del-uso-de-la-mascarilla/
 - https://ekobit.com/blog/designing-an-entity-attribute-value-model-with-ef-core/ 
+
+## C# Post
+- https://johnthiriet.com/configure-await
 
 ## Shortcut
 //select up scope
