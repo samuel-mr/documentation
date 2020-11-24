@@ -94,6 +94,10 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 ## C# Post
 - https://johnthiriet.com/configure-await
 
+## Q
+- https://www.pramp.com/#/
+- https://leetcode.com/
+
 ## Shortcut
 //select up scope
 Shift + Alt + +
