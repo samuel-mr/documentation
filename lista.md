@@ -110,3 +110,6 @@ Shift + Alt + +
 Shift + Alt + -
 //select all similar names
 Shift + Alt + ´
+
+## Clouds
+- https://www.ovhcloud.com/en/vps/ (cheap)
