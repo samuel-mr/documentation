@@ -113,3 +113,11 @@ Shift + Alt + ´
 
 ## Clouds
 - https://www.ovhcloud.com/en/vps/ (cheap)
+
+## Xamarin forms samples
+- https://github.com/syncfusion/xamarin-shopping-cart
+- https://github.com/syncfusion/Xamarin-ExpenseAnalysis
+- https://github.com/roubachof
+- https://github.com/davidortinau/Xappy
+
+
