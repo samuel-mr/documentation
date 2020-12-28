@@ -120,4 +120,5 @@ Shift + Alt + ´
 - https://github.com/roubachof
 - https://github.com/davidortinau/Xappy
 
-
+## Teacher
+- https://coggle.it/diagram/X-ZbLirTPnv7D4zP/t/220-recursos-tic-docentes-a5ba75c14f530e3db2bd6ffdfa76afde
