@@ -69,6 +69,7 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 - https://github.com/ddd-crew/ddd-starter-modelling-process
 - https://github.com/joelparkerhenderson/architecture_decision_record
 - https://martinfowler.com/articles/branching-patterns.html
+- https://pbs.twimg.com/media/Eoyc4ZvXMAAI7dy?format=jpg&name=4096x4096 (Mapa a un producto evolucionable)
 
 ## Music
 - https://orquestacionmidi.com
