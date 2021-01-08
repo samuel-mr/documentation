@@ -23,6 +23,9 @@
 - https://designsystemsrepo.com/
 - https://stripe.com/es-us
 
+## Design Case Study
+- https://uxplanet.org/lightsome-declutter-your-institute-mailbox-a-ui-ux-case-study-fe7854f31343
+
 ## win10
 - https://chrisandriessen.nl/taskbarx
 
