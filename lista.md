@@ -29,6 +29,7 @@
 ## win10
 - https://chrisandriessen.nl/taskbarx
 - http://carnackeys.com/
+- https://github.com/stefankueng/grepWin
 
 ## VS
 - https://marketplace.visualstudio.com/items?itemName=martinw.SmartPaster2013
