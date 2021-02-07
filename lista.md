@@ -4,6 +4,7 @@
 - https://www.protopie.io/
 - https://www.figma.com/
 - https://refactoringui.com/
+- https://practice.typekit.com/lesson/
 
 ## Dev
 - https://github.com/Squirrel/Squirrel.Windows
