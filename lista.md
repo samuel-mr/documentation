@@ -5,6 +5,7 @@
 - https://www.figma.com/
 - https://refactoringui.com/
 - https://practice.typekit.com/lesson/
+- https://dribbble.com/stories/2020/01/27/psychology-of-ux-research
 
 ## Dev
 - https://github.com/Squirrel/Squirrel.Windows
