@@ -6,6 +6,7 @@
 - https://refactoringui.com/
 - https://practice.typekit.com/lesson/
 - https://dribbble.com/stories/2020/01/27/psychology-of-ux-research
+- https://www.slideshare.net/CharlinAgramonte/mejorando-el-ux-de-nuestras-aplicaciones-mviles-en-xamarin-forms
 
 ## Dev
 - https://github.com/Squirrel/Squirrel.Windows
