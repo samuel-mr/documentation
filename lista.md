@@ -136,3 +136,6 @@ Shift + Alt + ´
 
 ## Apps interesantes
 - https://www.drools.org/
+
+## IA
+- https://towardsdatascience.com/whats-new-in-yolov4-323364bb3ad3
