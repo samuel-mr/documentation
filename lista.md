@@ -144,3 +144,5 @@ Shift + Alt + ´
 ## Android
 - Analisis de seguridad https://github.com/MobSF/Mobile-Security-Framework-MobSF
 - Lo mismo pero web: https://www.immuniweb.com/mobile/
+- Otro analizador https://www.hybrid-analysis.com/
+- GenyMotion in Cloud (probar muchos ndroids) https://azuremarketplace.microsoft.com/en-us/marketplace/apps/genymobile.genymotion-cloud?tab=overview
