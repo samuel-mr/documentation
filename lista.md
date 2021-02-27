@@ -140,3 +140,6 @@ Shift + Alt + ´
 ## IA
 - https://towardsdatascience.com/whats-new-in-yolov4-323364bb3ad3
 - https://jonathan-hui.medium.com/ssd-object-detection-single-shot-multibox-detector-for-real-time-processing-9bd8deac0e06#:~:text=SSD%20is%20a%20single%2Dshot,offsets%20to%20default%20boundary%20boxes.
+
+## Android
+- Analisis de seguridad https://github.com/MobSF/Mobile-Security-Framework-MobSF
