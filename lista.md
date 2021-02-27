@@ -146,3 +146,6 @@ Shift + Alt + ´
 - Lo mismo pero web: https://www.immuniweb.com/mobile/
 - Otro analizador https://www.hybrid-analysis.com/
 - GenyMotion in Cloud (probar muchos ndroids) https://azuremarketplace.microsoft.com/en-us/marketplace/apps/genymobile.genymotion-cloud?tab=overview
+
+## Seguridad y Firewalls
+- Gente Microsoft https://seguridadit.blogspot.com/
