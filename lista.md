@@ -149,3 +149,6 @@ Shift + Alt + ´
 
 ## Seguridad y Firewalls
 - Gente Microsoft https://seguridadit.blogspot.com/
+
+## Email
+- Plantilla email Outlook https://adaptivecards.io/
