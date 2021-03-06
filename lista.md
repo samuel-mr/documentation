@@ -143,7 +143,7 @@ Shift + Alt + ´
 
 ## IA - Apps
 - Ejemplos configurable de algoritmos genéticos https://www.blazor.ai/
-- 
+- Crear varias cosas con IA https://metacreation.net/
 ## Android
 - Analisis de seguridad https://github.com/MobSF/Mobile-Security-Framework-MobSF
 - Lo mismo pero web: https://www.immuniweb.com/mobile/
