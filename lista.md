@@ -95,6 +95,8 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 ## Platform Online
 - https://www.microsoft.com/es-xl/latampartneruniversity
 
+## Blazor
+- Plugins Dinámicos https://stevenknox.net/exploring-assembly-unloading-in-net-core-3-0-by-building-a-simple-plugin-architecture/
 ## BlazorWeb
 - https://blazorhelpwebsite.com
 
