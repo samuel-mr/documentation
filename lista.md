@@ -95,6 +95,10 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 ## Platform Online
 - https://www.microsoft.com/es-xl/latampartneruniversity
 
+## Javascript
+- Visor PDF https://github.com/mozilla/pdf.js
+- Firmas https://github.com/szimek/signature_pad
+- 
 ## Blazor
 - Plugins Dinámicos https://stevenknox.net/exploring-assembly-unloading-in-net-core-3-0-by-building-a-simple-plugin-architecture/
 ## BlazorWeb
