@@ -48,6 +48,7 @@
 - https://marketplace.visualstudio.com/items?itemName=Diagnostics.DiagnosticsConcurrencyVisualizer2019
 - https://marketplace.visualstudio.com/items?itemName=stefankert.BuildVision
 - https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager
+- https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
 - 
 ## VS extensibility Samples
 - https://github.com/microsoft/VSSDK-Extensibility-Samples
