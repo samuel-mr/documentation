@@ -49,6 +49,9 @@
 - https://marketplace.visualstudio.com/items?itemName=stefankert.BuildVision
 - https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager
 - https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
+
+## Wpf
+- Tab que mantiene el VisualTree https://github.com/ControlzEx/ControlzEx#tabcontrolex
 - 
 ## VS extensibility Samples
 - https://github.com/microsoft/VSSDK-Extensibility-Samples
