@@ -49,6 +49,7 @@
 - https://marketplace.visualstudio.com/items?itemName=stefankert.BuildVision
 - https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager
 - https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
+- https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc
 
 ## Wpf
 - Tab que mantiene el VisualTree https://github.com/ControlzEx/ControlzEx#tabcontrolex
