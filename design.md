@@ -1,3 +1,6 @@
+### UX 
+- Caso de estudio 1 : https://uxplanet.org/lightsome-declutter-your-institute-mailbox-a-ui-ux-case-study-fe7854f31343
+
 ## Prototipado
 
 - Prototipos interactivos https://www.protopie.io/
@@ -18,7 +21,7 @@
 - Ejemplos de emparejamiento de fuentes https://www.fontpair.co/
 - Muestra una fuente aleatoria https://fontspark.app/
 - Diseñador y previsualizador avanzado de fuentes prefabricadas https://play.typedetail.com/
-- 
+- Tipografía para Desarrolladores (Curso Treehouse) https://www.youtube.com/watch?v=agbh1wbfJt8
 ## GoodPractice
 
 - Ejemplos según formulario/escenario https://www.refactoringui.com/
@@ -42,6 +45,18 @@ https://designsystemsrepo.com/
 - Concepto de Colores accesibles https://stripe.com/blog/accessible-color-systems
 - Explicacion diferentes formas RGB, HSL, CIELab, etc https://www.youtube.com/watch?v=cuhD3N5T_MQ
 
+# Colores Gradientes
+- Galeria https://cssgradient.io/gradient-backgrounds/
+
 ### Free Images
 - https://unsplash.com/
-- 
+
+# Despliegue
+
+#### Generate Screenshots 
+- (iOS) Pixel perfect https://previewed.app/
+- (iOS + Android) Muy personalizable  https://theapplaunchpad.com/
+- (iOS + Android) Con plantillas predefinidas  https://mockups.pixeltrue.com/
+- De todo un poco: https://www.launchmatic.app
+- Simple y básico: https://screen.traction.one/
+
