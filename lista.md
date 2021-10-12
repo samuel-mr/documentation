@@ -1,5 +1,4 @@
-# tools
-## Design
+# Design
 
 - https://www.protopie.io/
 - https://www.figma.com/
@@ -8,14 +7,20 @@
 - https://dribbble.com/stories/2020/01/27/psychology-of-ux-research
 - https://www.slideshare.net/CharlinAgramonte/mejorando-el-ux-de-nuestras-aplicaciones-mviles-en-xamarin-forms
 
-## Dev
-- https://github.com/Squirrel/Squirrel.Windows
-- https://www.airsquirrels.com/reflector
-
 ## Web
 - https://lottiefiles.com/
 
-## Devops
+# Developer
+
+### Dev
+- https://github.com/Squirrel/Squirrel.Windows
+- https://www.airsquirrels.com/reflector
+
+## Javascript
+- Visor PDF https://github.com/mozilla/pdf.js
+- Firmas https://github.com/szimek/signature_pad
+
+# Devops
 - https://github.com/Microsoft/Terminal
 - https://winscp.net/
 
@@ -60,7 +65,7 @@
 ## MSIX
 https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 
-## Learn
+# Learn
 #### Software
 - [Free Code Camp](https://github.com/florinpop17/app-ideas)
 - [Desde 0](https://github.com/danistefanovic/build-your-own-x)
@@ -87,23 +92,20 @@ https://github.com/microsoft/MSIX-Labs/releases/tag/1.1
 - https://martinfowler.com/articles/branching-patterns.html
 - https://pbs.twimg.com/media/Eoyc4ZvXMAAI7dy?format=jpg&name=4096x4096 (Mapa a un producto evolucionable)
 
-## Music
+### Music
 - https://orquestacionmidi.com
 
-## Books
+### Books
 - https://www.kevinrooke.com/book-genres/psychology
 - https://soenglish.me/books-to-learn-english/#ielts
 
-## Roadmaps
+### Roadmaps
 - https://github.com/MoienTajik/AspNetCore-Developer-Roadmap
 - https://roadmap.sh
 
-## Platform Online
+### Platform Online
 - https://www.microsoft.com/es-xl/latampartneruniversity
 
-## Javascript
-- Visor PDF https://github.com/mozilla/pdf.js
-- Firmas https://github.com/szimek/signature_pad
 - 
 ## Blazor
 - Plugins Dinámicos https://stevenknox.net/exploring-assembly-unloading-in-net-core-3-0-by-building-a-simple-plugin-architecture/
