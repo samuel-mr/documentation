@@ -1,8 +1,9 @@
 
 ## win10
-- https://chrisandriessen.nl/taskbarx
-- http://carnackeys.com/
-- https://github.com/stefankueng/grepWin
+- Mapas mentales (nodos) https://gitmind.com/
+- Text to Speech (varias voces) https://www.naturalreaders.com/online/
+- Muestra shorcut presionado (para Presentaciones) http://carnackeys.com/
+- (Windows) Busca archivos con expresiones regulares  https://github.com/stefankueng/grepWin
 
 ## VS
 - https://marketplace.visualstudio.com/items?itemName=martinw.SmartPaster2013
