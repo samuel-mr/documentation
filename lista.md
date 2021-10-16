@@ -1,6 +1,6 @@
 https://github.com/markodenic/web-development-resources
 
-# fastest keys
+# fastest fingers
 - https://www.keybr.com // usarlo como entrenamiento general inicial
 - https://monkeytype.com //usarlo para palabras lentas o erradas y finalmente palabras reales
 
