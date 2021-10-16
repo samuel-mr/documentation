@@ -1,5 +1,9 @@
 https://github.com/markodenic/web-development-resources
 
+# fastest keys
+- https://www.keybr.com // usarlo como entrenamiento general inicial
+- https://monkeytype.com //usarlo para palabras lentas o erradas y finalmente palabras reales
+
 ## win10
 - Mapas mentales (nodos) https://gitmind.com/
 - Text to Speech (varias voces) https://www.naturalreaders.com/online/
