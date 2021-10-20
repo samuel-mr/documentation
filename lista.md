@@ -26,6 +26,8 @@ https://github.com/markodenic/web-development-resources
 - https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
 - https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc
 
+## IntelliJ
+- https://plugins.jetbrains.com/plugin/9792-key-promoter-x   learn shorcut
 ## Wpf
 - Tab que mantiene el VisualTree https://github.com/ControlzEx/ControlzEx#tabcontrolex
 - 
