@@ -29,6 +29,9 @@ https://github.com/markodenic/web-development-resources
 ## VS Code
 - https://viatsko.github.io/awesome-vscode/#better-align  // Awesome plugins
 - https://marketplace.visualstudio.com/items?itemName=wwm.better-align //alinear codigo
+- https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks // Add Bookmarks
+- https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag  // Auto-rename tag
+- https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode      // AI code completion assistent
 
 ## IntelliJ
 - https://plugins.jetbrains.com/plugin/9792-key-promoter-x   learn shorcut
