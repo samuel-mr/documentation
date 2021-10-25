@@ -26,6 +26,10 @@ https://github.com/markodenic/web-development-resources
 - https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
 - https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc
 
+## VS Code
+- https://viatsko.github.io/awesome-vscode/#better-align  // Awesome plugins
+- https://marketplace.visualstudio.com/items?itemName=wwm.better-align //alinear codigo
+
 ## IntelliJ
 - https://plugins.jetbrains.com/plugin/9792-key-promoter-x   learn shorcut
 ## Wpf
