@@ -1,5 +1,5 @@
-# tools
-List of tolls
+# C++
+
 
 ### Print
 ```
@@ -8,10 +8,12 @@ cout << "\ntexto" << endl;      Imprime a consola
 string almacen;
 cin >> almacen;                 Pide que el usuario ingrese dato y será almacenado en 'almacen'
 ```
+
 ### Punteros
+```
 & -> obtener la dirección de memoria de alguna variable
 * -> obtener el valor en si de una dirección de memoria
-```
+
 char variable = 'a';
 char *puntero = &variable;
 
