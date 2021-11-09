@@ -10,7 +10,10 @@
 
 - https://www.figma.com/
 - Photoshop lite Web https://www.photopea.com/
-- 
+
+
+## Herramientas de diseño
+- VisBug (Chrome Extension)
 
 ## Imagenes
 - Crear animaciones, galeria  https://lottiefiles.com/
