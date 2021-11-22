@@ -34,6 +34,21 @@ https://github.com/markodenic/web-development-resources
 - https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode      // AI code completion assistent
 - https://github.com/tonsky/FiraCode                                              // Fuente con ligaduras
 
+### configuraciones:
+1. configuración para colorizar los brackets:
+```
+ "editor.bracketPairColorization.enabled": true,
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#5caeef",
+        "editorBracketHighlight.foreground2": "#dfb976",
+        "editorBracketHighlight.foreground3": "#c172d9",
+        "editorBracketHighlight.foreground4": "#4fb1bc",
+        "editorBracketHighlight.foreground5": "#97c26c",
+        "editorBracketHighlight.foreground6": "#abb2c0",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
+      }
+```
+
 ## IntelliJ
 - https://plugins.jetbrains.com/plugin/9792-key-promoter-x   learn shorcut
 ## Wpf
