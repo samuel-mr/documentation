@@ -26,13 +26,15 @@ https://github.com/markodenic/web-development-resources
 - https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
 - https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc
 
+***
 ## VS Code
-- https://viatsko.github.io/awesome-vscode/#better-align  // Awesome plugins
-- https://marketplace.visualstudio.com/items?itemName=wwm.better-align //alinear codigo
-- https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks // Add Bookmarks
-- https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag  // Auto-rename tag
-- https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode      // AI code completion assistent
-- https://github.com/tonsky/FiraCode                                              // Fuente con ligaduras
+- [Awesome plugins](https://viatsko.github.io/awesome-vscode/#better-align)
+- [Beetter Align](https://marketplace.visualstudio.com/items?itemName=wwm.better-align) Code and comments alignment
+- [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks) Add Bookmarks
+- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)  Rename automatically editing tags
+- [TabNine](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode) AI code completion assistent
+- [FireCode](https://github.com/tonsky/FiraCode) Fuente con ligaduras
+- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 
 ### configuraciones:
 1. configuración para colorizar los brackets:
@@ -48,7 +50,7 @@ https://github.com/markodenic/web-development-resources
         "editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
       }
 ```
-
+***
 ## IntelliJ
 - https://plugins.jetbrains.com/plugin/9792-key-promoter-x   learn shorcut
 ## Wpf
