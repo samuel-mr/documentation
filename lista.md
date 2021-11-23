@@ -74,6 +74,9 @@ https://github.com/markodenic/web-development-resources
 *** 
 # Google Chrome Extensions:
 - JSON Viewer Pro
+- Wappalyzer
+- React Dev Tools
+- Redux Dev Tools
 
 ***
 ## IntelliJ
