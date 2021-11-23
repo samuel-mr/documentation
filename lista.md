@@ -71,6 +71,10 @@ https://github.com/markodenic/web-development-resources
         "editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
       }
 ```
+*** 
+# Google Chrome Extensions:
+- JSON Viewer Pro
+
 ***
 ## IntelliJ
 - https://plugins.jetbrains.com/plugin/9792-key-promoter-x   learn shorcut
