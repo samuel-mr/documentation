@@ -35,7 +35,7 @@ https://github.com/markodenic/web-development-resources
 - [TabNine](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode) AI code completion assistent
 - [FireCode](https://github.com/tonsky/FiraCode) Fuente con ligaduras
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
-- [VS Shortcuts](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings) Shortcuts like Visual Studio
+- [VS Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings) Shortcuts like Visual Studio
 
 ### configuraciones:
 1. configuración para colorizar los brackets:
