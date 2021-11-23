@@ -38,7 +38,27 @@ https://github.com/markodenic/web-development-resources
 - [VS Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings) Shortcuts like Visual Studio
 
 ### configuraciones:
-1. configuración para colorizar los brackets:
+1. Configuración de bindings sobre-escritos
+```
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+alt+a",
+        "command": "wwm.aligncode",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+r ctrl+t",
+        "command": "editor.action.changeAll",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "explorer.newFile"
+    }
+]
+```
+2. configuración para colorizar los brackets:
 ```
  "editor.bracketPairColorization.enabled": true,
     "workbench.colorCustomizations": {
