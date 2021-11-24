@@ -16,7 +16,7 @@ let numero:i32 = 2  # explícito
 ```
 
 ## Shadowing
-Capacidad para declara una variable en un mismo escope
+Capacidad para declara una variable en un mismo escope o en un scope interno. La nueva variable reemplazaría a la antigua
 ``````
   let x = 1;
   {
