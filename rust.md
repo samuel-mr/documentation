@@ -10,13 +10,76 @@ let mut edad = 54
 ```
 
 ```
-let numero = 2      # implícito
-let numero:i32 = 2  # explícito
+let numero = 2        # implícito
+let numero:i32 = 2    # explícito
+
+let entero = 1        # i32 inferido
+let real   = 1.1      # f64 inferido
+
+let millon = 1_000_000u32 # número más legible
 
 ```
+# Tipos
+### Tipos Escalares
+```
+i8, i16, i32, i64, i128  enteros positivos y negativos
+u8, u16, u32, u64, u128  enteros positivos
+f32, f64                 flotantes
+char                     UTF-8, podemos colocar emojis
+bool
+()                       unit type
+```
+
+### Tipos Compuestos
+```
+[1,2,3]       arrays
+(1,true)      truplas
+```
+### Arreglos
+- La longitud es  fija
+- Solo puede almacenar 1 solo tipo de dato
+```
+let numeros     = [1,2,3];        arreglo solo lectura
+let mut numeros = [1,2,3];        arreglo de valores modificables
+
+let numeros:[i32:4] = [1,2,3,4];  especifica tipo y tamaño
+let numeros = [2;5];              [valor;repetir x veces] print: 2,2,2,2,2
+
+
+println!("{:?}", numeros);   imprime en una sola línea
+println!("{:#?}", numeros);  imprime cada item en una nueva línea
+
+arreglo[i] = 1               asignar
+
+len()                        cantidad elementos
+```
+ENVIO DE REFERENCIA DE ARRAY
+```
+let numeros = [5,4,3,2,1];
+fn metodo(slice: &[i32]){
+  ...
+}
+metodo(&numeros);             TODO:                                          print 5,4,3,2,1
+metodo(&numeros[1 .. 3]);     PARCIAL: [posición inicial .. posición final]  print 4,3
+```
+
+
+# Operadores
+```
++ - * /     Numéricos
+
+> < == !=   Relacionales
+
+&&          Lógicos
+||
+
+
+1u32 - 2    !error, desbordamiento, porque el cálculo será negativo y el tipo resultado se infiere q es unsigned 32
+```
+
 
 ## Shadowing
-Capacidad para declara una variable en un mismo escope o en un scope interno. La nueva variable reemplazaría a la antigua
+Capacidad para declara una variable con el mismo nombre en un mismo escope o en un scope interno. La nueva variable reemplazaría a la antigua.
 ``````
   let x = 1;
   {
@@ -29,12 +92,14 @@ Capacidad para declara una variable en un mismo escope o en un scope interno. La
   x                 // print true
 ``````
 
+## Conversiones
 
 ``````
-
+let texto   = "12";
+let num:i32 = texto.parse().unwrap();  // parse infiere el tipo destino de la conversión según la declaración de la variable
 
 ``````
-# Visual Studio Code Extensions
+## Visual Studio Code Extensions
 - [rust-analizer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) sucesor de Rust (official-plugin)
 - [better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml) formateador y resaltador de sintaxis para los archivos de configuración de Rust
 - [crates](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates) Da información sobre las dependencias que usan Cargo.toml
