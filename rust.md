@@ -39,6 +39,8 @@ bool
 - La longitud es  fija
 - Solo puede almacenar 1 solo tipo de dato
 ```
+definicion: [x...z]
+
 let numeros     = [1,2,3];        arreglo solo lectura
 let mut numeros = [1,2,3];        arreglo de valores modificables
 
@@ -63,7 +65,60 @@ metodo(&numeros);             TODO:                                          pri
 metodo(&numeros[1 .. 3]);     PARCIAL: [posición inicial .. posición final]  print 4,3
 ```
 
+## TUPLAS
+- Puede almacenar variables de distintos tipos
+```
+definicion: (T1...Tx)
 
+let tupla = (1,true, 3.4);                implícito
+let tupla: (i32,bool,f64) = (1,true,3.4); explícito
+
+let tupla     = (1,true);           tupla solo lectura
+let mut tupla = (1,true);           tupla lectura + escritura
+
+let tupla: ((i32,bool),(f64,i32));  tuplas anidadas
+
+tupla.0                             accede a cada elemento por su posición
+
+let (numero, boleano) = (1, true);  desestructuración
+numero    print:1
+boleano   print: true
+```
+
+## VECTORES
+- Son arrays redimensionables
+- El tamaño no es conocido en tiempo de compilación
+- vec! es un macro para inicializar
+
+Inicialización
+```
+let vector           = vec![1,2,3];     Tipo implícito con data
+let vector: Vec<i32> = vec![1,2,3];     Tipo explícito con data
+
+let mut vector: Vec<i32> = Vec::new();  Tipo explícito
+ 
+let mut vector = Vec::new();            Tipo postergado: sin tipo en la inicialización, pero...
+vector.push(1);                         gracias a esta línea, en tiempo de diseño se infiere el tipo i32 del vector
+```
+
+```    
+let vector = Vec::new();
+let vector = vec![1, 2, 3];         implícito
+#####let vector: vec<i32> = [1, 2, 3];   explícito
+
+let ...          no modificable
+let mut ...      modificable 
+
+vector[1]       obtiene el elemento de alguna [posición]
+
+METODOS
+push(1)        agregar al final
+insert(0, -1)  agrega en (posición, elemento)
+pop()          elimina el último (por defecto retorna un Option con el elemento eliminado)
+pop().unwrap() es el pop y además desempaqueta ese elemento eliminado
+remove(0)      elimina en (posición)
+
+```
 # Operadores
 ```
 + - * /     Numéricos
