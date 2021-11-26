@@ -37,6 +37,7 @@ https://github.com/markodenic/web-development-resources
 - [FireCode](https://github.com/tonsky/FiraCode) Fuente con ligaduras
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 - [VS Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings) Shortcuts like Visual Studio
+- [Icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) VS Code Icons
 
 ### configuraciones:
 1. Configuración de bindings sobre-escritos
