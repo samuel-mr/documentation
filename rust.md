@@ -1,4 +1,42 @@
-#RUST!
+# RUST!
+
+### Bloques
+- Las variables se crean, modifican y destruyen dentro de su bloque
+- Una variable está disponible dentro de su bloque y los bloques anidados
+- Una variable no está disponible en un bloque superior
+
+Alcance de las variables
+```
+fn main() {
+    // bloque 'A'
+    {
+        // bloque 'B' ... aquí también están disponibles las variables de 'A'
+    }
+    // aquí ya no están disponible ninguna variable del bloque 'B'
+}
+```
+Bloques con return (como funciones anónimas internas a un fn)
+```
+fn main() {
+  let resultado = {
+      let variable: i32 = 10;
+      variable                // la última línea quiere decir que de esa variable se retornará su VALOR
+  };
+  println!("{}", resultado);  // print: 10
+}
+```
+ejemplo 2
+```
+let resultado = 10;
+let mensaje = if resultado == 10 {
+    String::from("El resultado es 10")  // sin 'return' ni 'punto y coma'
+} else {
+    String::from("El resultado no es 10") // sin 'return' ni 'punto y coma'
+};
+
+println!("{}", mensaje);  // print: El resultado es 10
+```
+Declaración
 ```
 let      => inmutable
 let mut  => mutable
@@ -35,6 +73,12 @@ bool
 [1,2,3]       arrays
 (1,true)      truplas
 ```
+
+### String
+```
+.to_lowercase()
+```
+
 ### Arreglos
 - La longitud es  fija
 - Solo puede almacenar 1 solo tipo de dato
@@ -135,7 +179,7 @@ remove(0)      elimina en (posición)
 
 ## Shadowing
 Capacidad para declara una variable con el mismo nombre en un mismo escope o en un scope interno. La nueva variable reemplazaría a la antigua.
-``````
+```
   let x = 1;
   {
       x             // print 1
@@ -145,15 +189,74 @@ Capacidad para declara una variable con el mismo nombre en un mismo escope o en 
    x                // print 1
   let x = true;
   x                 // print true
-``````
+```
 
 ## Conversiones
 
-``````
+```
 let texto   = "12";
 let num:i32 = texto.parse().unwrap();  // parse infiere el tipo destino de la conversión según la declaración de la variable
+```
 
-``````
+
+## Condicionales
+
+```
+if a == b {
+    ...
+} else if a == c {
+    ...
+} else {
+    ...
+}
+```
+
+## Ciclos
+para iterar: loop, for, while
+```
+loop {  }
+
+let numeros = [5, 4, 3, 2, 1];
+for item in numeros.iter() {
+                              // item será cada número
+}
+    
+for item in 1..3 {            // genera un array del 1 al 2 (el último no se considera)
+                              // item será cada número
+}
+
+while [condición] {
+
+}
+
+```
+Alteraciones de los ciclos
+```
+break;      finaliza el ciclo actual
+```
+
+## Match
+~ switch
+```
+match numero {
+    1 =>        ,         si es 1
+    2 =>        ,         
+    3 =>        ,
+    4 | 5 =>    ,          si es 4 o 5
+    6..=10      ,          si está entre el 6 y el 10 (inclusivos)
+    _ => 
+};
+```
+match con return 
+```
+let resultado = match numero {  // el string final se asignará a la variable 'resultado'
+    1 => "es uno",
+    _ => "es otro numero"
+};
+```
+
+
+
 ## Visual Studio Code Extensions
 - [rust-analizer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) sucesor de Rust (official-plugin)
 - [better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml) formateador y resaltador de sintaxis para los archivos de configuración de Rust
