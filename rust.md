@@ -1,5 +1,47 @@
 # RUST!
+> Seguridad, concurrencia y rendimiento
 
+- born 2015
+- multiparadigma (imparetivo, estructurado, funcional, concurrente)
+- fuertemente y estáticamente tipado 
+- infiere tipos
+ 
+
+### Alto nivel
+- tipo de datos enumerados, algebraicos
+- genéricos
+- traits
+- closures
+- funciones de alto órden
+- macros sin efectos secundarios (Hygienic macros)
+- testeable
+
+### Bajo nivel
+- performance
+- bajo consumo de memoria
+- no GC
+- no Runtime 
+
+#### Memoria segura sin GC
+- No fallos de segmentación: por intento de acceso de memoria q no te pertenece
+- No double free: cuando el programa se comporta de manera impredecible, por ejem al intentar liberar la memoria de varios objetos con punteros entre si.
+- No dangling pointers: son punteros que no apuntan a un objeto válido
+- No invalidación de iteradores
+- No sobrecarga de buffers
+- No punteros nulos !
+
+Una variable asignada, se libera cuando sale del scope
+___
+> Lenguaje de bajo nivel con caraterísticas de álto nivel**
+
+Todo tiene un solo dueño
+```
+fn main(){
+	let A = 5;
+    // El dueño de A es main()
+}
+```
+___
 ### Bloques
 - Las variables se crean, modifican y destruyen dentro de su bloque
 - Una variable está disponible dentro de su bloque y los bloques anidados
