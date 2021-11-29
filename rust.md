@@ -157,11 +157,11 @@ let mut ...      modificable
 vector[1]       obtiene el elemento de alguna [posición]
 
 METODOS
-push(1)        agregar al final
-insert(0, -1)  agrega en (posición, elemento)
-pop()          elimina el último (por defecto retorna un Option con el elemento eliminado)
-pop().unwrap() es el pop y además desempaqueta ese elemento eliminado
-remove(0)      elimina en (posición)
+.push(1)        agregar al final
+.insert(0, -1)  agrega en (posición, elemento)
+.pop()          elimina el último (por defecto retorna un Option con el elemento eliminado)
+.pop().unwrap() es el pop y además desempaqueta ese elemento eliminado
+.remove(0)      elimina en (posición)
 
 ```
 # Operadores
@@ -301,6 +301,7 @@ variable.push_str(" !!!");                       print iniciado... !!!
 // Metodos
 .to_string()                                        convierte srt a String
 ```
+
 
 ## Visual Studio Code Extensions
 - [rust-analizer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) sucesor de Rust (official-plugin)
