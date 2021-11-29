@@ -302,7 +302,40 @@ variable.push_str(" !!!");                       print iniciado... !!!
 .to_string()                                        convierte srt a String
 ```
 
+# TIPOS PERSONALIZADOS
 
+## Enumeradores
+```
+enum Response {
+    Ok,
+    Error(u32, String),                         // tupla
+}
+
+let result = Response::Error(501, String::from("ocurrió algun error !"));
+match result {
+    Response::Ok =>                  ,          // si es 'Ok'
+    Response::Error(403, _ ) =>      ,          // si la tupla es Error con el primero parámetro como '403'
+    Response::Error(404, _ ) =>      ,
+    Response::Error(405, _ ) =>      ,
+    Response::Error( _, mensaje) =>  ,           // si la segunda variable es un string, ingorará la primera variable
+};
+```
+
+## Estructuras
+```
+struct User {
+    username: String
+}
+
+// 1. inicializar las propiedades directamente
+let variable = User {                            
+    username: String::from("texto")
+};
+
+// 2. inicializar las propiedades por medio de otras variables
+let username = String::from("texto");
+let mut us = User { username }; // como la variable se llama 'username' buscará una propiedad con el mismo nombre
+```
 ## Visual Studio Code Extensions
 - [rust-analizer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) sucesor de Rust (official-plugin)
 - [better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml) formateador y resaltador de sintaxis para los archivos de configuración de Rust
