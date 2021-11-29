@@ -1,7 +1,57 @@
 # Rust !
 > Seguridad, concurrencia y rendimiento
 
-### Bloques
+## Declaración
+```
+let      => inmutable
+let mut  => mutable
+const PI => inmutable constante
+
+const PI = 3.14
+let mut edad = 54
+
+```
+
+```
+let numero = 2            # implícito
+let numero:i32 = 2        # explícito
+
+let entero = 1            # i32 inferido
+let real   = 1.1          # f64 inferido
+
+let millon = 1_000_000u32 # número más legible
+
+```
+
+## Shadowing
+Capacidad para declara una variable con el mismo nombre en un mismo escope o en un scope interno. La nueva variable reemplazaría a la antigua.
+```
+  let x = 1;
+  {
+      x             // print 1
+      let x = "abc"; 
+      x             // print 'abc'
+  }
+   x                // print 1
+  let x = true;
+  x                 // print true
+```
+
+
+## Operadores
+```
++ - * /     Numéricos
+
+> < == !=   Relacionales
+
+&&          Lógicos
+||
+
+
+1u32 - 2    !error, desbordamiento, porque el cálculo será negativo y el tipo resultado se infiere q es unsigned 32
+```
+
+## Bloques
 - Las variables se crean, modifican y destruyen dentro de su bloque
 - Una variable está disponible dentro de su bloque y los bloques anidados
 - Una variable no está disponible en un bloque superior
@@ -37,29 +87,14 @@ let mensaje = if resultado == 10 {
 
 println!("{}", mensaje);  // print: El resultado es 10
 ```
-Declaración
-```
-let      => inmutable
-let mut  => mutable
-const PI => inmutable constante
 
-const PI = 3.14
-let mut edad = 54
+# TIPOS PRIMITIVOS
+- Primitivos Escalares
+- Primitivos Compuestos
+    - Tuplas (1,true)
+    - Arreglos [1,2,3]
 
-```
-
-```
-let numero = 2        # implícito
-let numero:i32 = 2    # explícito
-
-let entero = 1        # i32 inferido
-let real   = 1.1      # f64 inferido
-
-let millon = 1_000_000u32 # número más legible
-
-```
-# Tipos
-### Tipos Escalares
+## Escalares
 ```
 i8, i16, i32, i64, i128  enteros positivos y negativos
 u8, u16, u32, u64, u128  enteros positivos
@@ -69,18 +104,12 @@ bool
 ()                       unit type
 ```
 
-### Tipos Compuestos
-```
-[1,2,3]       arrays
-(1,true)      truplas
-```
-
 ### String
 ```
 .to_lowercase()
 ```
 
-### Arreglos
+## Arreglos
 - La longitud es  fija
 - Solo puede almacenar 1 solo tipo de dato
 ```
@@ -130,6 +159,44 @@ numero    print:1
 boleano   print: true
 ```
 
+
+# TIPOS PERSONALIZADOS
+
+## Enumeradores
+```
+enum Response {
+    Ok,
+    Error(u32, String),                         // tupla
+}
+
+let result = Response::Error(501, String::from("ocurrió algun error !"));
+match result {
+    Response::Ok =>                  ,          // si es 'Ok'
+    Response::Error(403, _ ) =>      ,          // si la tupla es Error con el primero parámetro como '403'
+    Response::Error(404, _ ) =>      ,
+    Response::Error(405, _ ) =>      ,
+    Response::Error( _, mensaje) =>  ,           // si la segunda variable es un string, ingorará la primera variable
+};
+```
+
+## Estructuras
+```
+struct User {
+    username: String
+}
+
+// 1. inicializar las propiedades directamente
+let variable = User {                            
+    username: String::from("texto")
+};
+
+// 2. inicializar las propiedades por medio de otras variables
+let username = String::from("texto");
+let mut us = User { username }; // como la variable se llama 'username' buscará una propiedad con el mismo nombre
+```
+
+
+# TIPOS SEGUN LIBRERIA STD
 ## VECTORES
 - Son arrays redimensionables
 - El tamaño no es conocido en tiempo de compilación
@@ -164,32 +231,25 @@ METODOS
 .remove(0)      elimina en (posición)
 
 ```
-# Operadores
+
+
+## Strings
 ```
-+ - * /     Numéricos
+str           inmutable (en stack)
+String        mutable   (en heap)
 
-> < == !=   Relacionales
+let variable = "Texto";                          tipo 'str' inferido
+let mut variable = String::new();                tipo string
+let mut variable = String::from("iniciado");     tipo string con texto
 
-&&          Lógicos
-||
+variable.push('.');
+variable.push('.');
+variable.push('.');
+variable.push_str(" !!!");                       print iniciado... !!!
 
 
-1u32 - 2    !error, desbordamiento, porque el cálculo será negativo y el tipo resultado se infiere q es unsigned 32
-```
-
-
-## Shadowing
-Capacidad para declara una variable con el mismo nombre en un mismo escope o en un scope interno. La nueva variable reemplazaría a la antigua.
-```
-  let x = 1;
-  {
-      x             // print 1
-      let x = "abc"; 
-      x             // print 'abc'
-  }
-   x                // print 1
-  let x = true;
-  x                 // print true
+// Metodos
+.to_string()                                        convierte srt a String
 ```
 
 ## Conversiones
@@ -199,6 +259,8 @@ let texto   = "12";
 let num:i32 = texto.parse().unwrap();  // parse infiere el tipo destino de la conversión según la declaración de la variable
 ```
 
+
+# FLUJOS DE CONTROL
 
 ## Condicionales
 
@@ -248,14 +310,15 @@ match numero {
     _ => 
 };
 ```
-match con return 
+match con return implícito
 ```
 let resultado = match numero {  // el string final se asignará a la variable 'resultado'
-    1 => "es uno",
-    _ => "es otro numero"
+    1 => "es uno",              // retorna str
+    _ => "es otro numero"       // retorna str
 };
 ```
-## Funciones
+
+# FUNCIONES
 ```
 fn sumar(a: i32, b: i32) -> i32 {                  Tradicional
     return a + b;
@@ -283,60 +346,8 @@ fn factorial(num: i32) -> i32 {                     Simplificado
 }
 ```
 
-### Texto
-```
-str           inmutable (en stack)
-String        mutable   (en heap)
 
-let variable = "Texto";                          tipo 'str' inferido
-let mut variable = String::new();                tipo string
-let mut variable = String::from("iniciado");     tipo string con texto
-
-variable.push('.');
-variable.push('.');
-variable.push('.');
-variable.push_str(" !!!");                       print iniciado... !!!
-
-
-// Metodos
-.to_string()                                        convierte srt a String
-```
-
-# TIPOS PERSONALIZADOS
-
-## Enumeradores
-```
-enum Response {
-    Ok,
-    Error(u32, String),                         // tupla
-}
-
-let result = Response::Error(501, String::from("ocurrió algun error !"));
-match result {
-    Response::Ok =>                  ,          // si es 'Ok'
-    Response::Error(403, _ ) =>      ,          // si la tupla es Error con el primero parámetro como '403'
-    Response::Error(404, _ ) =>      ,
-    Response::Error(405, _ ) =>      ,
-    Response::Error( _, mensaje) =>  ,           // si la segunda variable es un string, ingorará la primera variable
-};
-```
-
-## Estructuras
-```
-struct User {
-    username: String
-}
-
-// 1. inicializar las propiedades directamente
-let variable = User {                            
-    username: String::from("texto")
-};
-
-// 2. inicializar las propiedades por medio de otras variables
-let username = String::from("texto");
-let mut us = User { username }; // como la variable se llama 'username' buscará una propiedad con el mismo nombre
-```
-## Visual Studio Code Extensions
+# Visual Studio Code Extensions
 - [rust-analizer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) sucesor de Rust (official-plugin)
 - [better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml) formateador y resaltador de sintaxis para los archivos de configuración de Rust
 - [crates](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates) Da información sobre las dependencias que usan Cargo.toml
