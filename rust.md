@@ -255,8 +255,52 @@ let resultado = match numero {  // el string final se asignará a la variable 'r
     _ => "es otro numero"
 };
 ```
+## Funciones
+```
+fn sumar(a: i32, b: i32) -> i32 {                  Tradicional
+    return a + b;
+}
+
+fn sumar(a: i32, b: i32) -> i32 {                  Simplificado
+    a + b
+}
+
+// ejemplo If Else
+fn factorial(num: i32) -> i32 {                    Tradicional
+    if num == 1 {
+        return num;
+    }
+    return num * factorial_clasico(num - 1);
+}
+
+// ejemplos
+fn factorial(num: i32) -> i32 {                     Simplificado
+    if num == 1 {
+        num
+    } else {
+        num * factorial_simplificado(num - 1)
+    }
+}
+```
+
+### Texto
+```
+str           inmutable (en stack)
+String        mutable   (en heap)
+
+let variable = "Texto";                          tipo 'str' inferido
+let mut variable = String::new();                tipo string
+let mut variable = String::from("iniciado");     tipo string con texto
+
+variable.push('.');
+variable.push('.');
+variable.push('.');
+variable.push_str(" !!!");                       print iniciado... !!!
 
 
+// Metodos
+.to_string()                                        convierte srt a String
+```
 
 ## Visual Studio Code Extensions
 - [rust-analizer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) sucesor de Rust (official-plugin)
