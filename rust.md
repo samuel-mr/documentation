@@ -62,6 +62,7 @@ fn main() {
     // bloque 'A'
     {
         // bloque 'B' ... aquí también están disponibles las variables de 'A'
+        // al finalizar este bloque se eliminarán todas las variables creadas en este bloque 'B'
     }
     // aquí ya no están disponible ninguna variable del bloque 'B'
 }
@@ -110,7 +111,8 @@ bool
 ```
 
 ## Arreglos
-- La longitud es  fija
+- La longitud es fija
+- almacenado en el stack
 - Solo puede almacenar 1 solo tipo de dato
 ```
 definicion: [x...z]
@@ -137,6 +139,22 @@ fn metodo(slice: &[i32]){
 }
 metodo(&numeros);             TODO:                                          print 5,4,3,2,1
 metodo(&numeros[1 .. 3]);     PARCIAL: [posición inicial .. posición final]  print 4,3
+```
+
+## Slices
+
+- Permite prestar una sección de un arreglo
+- No se le conoce el tamaño en tiempo de ejecución
+- Almacenado en el Heap
+```
+    let mensaje = String::from("hola mundo");
+
+    let inicio = &mensaje[0..4];          // indice inicial .. indice final
+    let inicio = &mensaje[..4];           // idem
+
+    let fin= &mensaje[4..mensaje.len()];  // inicia en 4 hasta el final
+    let fin= &mensaje[4..];               // idem
+
 ```
 
 ## TUPLAS
@@ -194,6 +212,21 @@ let variable = User {
 let username = String::from("texto");
 let mut us = User { username }; // como la variable se llama 'username' buscará una propiedad con el mismo nombre
 ```
+permitir que la información sea mostrada en Debug, ejem: para imprimir los datos
+```
+#[derive(Debug)]    // permite que se puede imprimir todos los datos tan solo indicando la estructura
+struct User {
+   ...
+```
+### Estructura tipo Tupla:
+```
+#[derive(Debug)]
+struct Color(u32, u32, u32);      // no serán propiedades sino valores de la tupla
+
+let white = Color(255,255,255);
+
+println!("El color es: {:?}", white);
+```
 
 
 # TIPOS SEGUN LIBRERIA STD
@@ -250,6 +283,117 @@ variable.push_str(" !!!");                       print iniciado... !!!
 
 // Metodos
 .to_string()                                        convierte srt a String
+```
+
+## Option
+
+Permite manejar la falla desde un generic q tiene 2 posibilidades, ok y error
+```
+enum Option<T> {
+    Some(T),
+    None
+}
+
+let variable: Option<i32> = Some(32);     // inicializa con valor
+let variable: Option<i32> = None;         // inicializa como 'sin valor'
+
+match opcion {
+    Some(variable) =>     ,       // si es ok
+    None =>               ,       // si hay error
+}
+```
+Ejemplo 1
+```
+fn main() {
+    let result = dividir(2, 0);
+    match result {
+        Some(1) =>                ,       // si es 1
+        Some(2) =>                ,       // si es 2
+        Some(_) =>                ,       // si es cualquier valor ok
+        Some(variable) =>         ,       // si es cualquier valor ok (pero rescato la variable)
+        None =>                   ,       // si hay error
+    }
+}
+
+fn dividir(a: i32, b: i32) -> Option<i32> {
+    if b == 0 {
+        None
+    } else {
+        Some(a / b)
+    }
+}
+```
+Ejemplo 2: dentro de una estructura
+```
+    #[derive(Debug)]
+    struct User {
+        edad: Option<i32>,
+    };
+    let entidad = User {
+        edad: None,
+    };
+
+    println!("{:?}", entidad);
+```
+
+funciones
+```
+.unwrap()             // obtendrá el valor directamente. solo usar si está seguro que tiene valor.
+                      // en caso no tenga valor lanzará un 'panick!!!'
+.unwrap_or(T)         // como unwrap(), pero si no tiene valor retornará el valor del parámetro
+.expect("..");        // como unwrap(), pero agrega un mensaje descriptivo si lanza el 'panick'
+```
+
+## Result
+Como el Option pero con la adición que permite especificar el error
+```
+enum Result<T, E> {
+    Ok(T),
+    Err(E)
+}
+
+let result: Result<i32,String> = Ok(2);                         // inicializa como 'ok' con el valor 2
+let result: Result<i32,String> = Err(String::from("mensaje"));  // inicializa como 'error' con el mensaje
+
+match resultado {
+    Ok(variable) =>     ,       // si es ok
+    Err(error) =>       ,       // si hay error
+}
+```
+ejemplo 1:
+```
+enum DivisionErrorType {
+    ByCero,
+    ByNegative,
+}
+fn division2(a: i32, b: i32) -> Result<i32, DivisionErrorType> {
+    if b == 0 {
+        Err(DivisionErrorType::ByCero)
+    } else if b < 0 {
+        Err(DivisionErrorType::ByNegative)
+    } else {
+        Ok(a / b)
+    }
+}
+
+fn main() {
+    let result = division2(3, 2);
+    match result {
+        Ok(1) =>                     ,          // si es ok con valor 1
+        Ok(variable) =>              ,          // si es ok, asigno el valor a la variable
+        Ok(_) =>                     ,          // si es ok con cualquier valor
+        Err(DivisionErrorType::ByCero) =>     , // si es error pero 'ByCero'
+        Err(DivisionErrorType::ByNegative) => , // si es error pero 'ByNegative'
+    };
+}
+```
+
+funciones
+```
+.unwrap()             // obtendrá el valor directamente. solo usar si está seguro que tiene valor.
+                      // en caso no tenga valor lanzará un 'panick!!!'
+.unwrap_or(T)         // como unwrap(), pero si no tiene valor retornará el valor del parámetro
+.expect("error");     // como unwrap(), pero agrega un mensaje descriptivo si lanza el 'panick'
 ```
 
 ## Conversiones
@@ -346,6 +490,34 @@ fn factorial(num: i32) -> i32 {                     Simplificado
 }
 ```
 
+## Funciones en Estructuras
+
+```
+struct User {
+    name: String,
+}
+
+impl User {                          // métodos para la estructura 'User'
+    fn execGreeting(&self) {         // selft: para usar internamente las propiedades
+        // self hace referencia a si mismo (como this)
+        println!("Soy {}", self.name); 
+    }
+    fn changeName(&mut self, newName: String) {
+        // &mut -> hace referencia a si mismo y especifica que es modificable
+        self.name = newName;
+    }
+}
+
+// Usando la esctructura y sus métodos
+let mut usu = User {
+    name: String::from("bach"),
+};
+usu.execGreeting();
+usu.name = "mozart".to_string();
+usu.execGreeting();
+usu.changeName("beethoven".to_string());
+usu.execGreeting();
+```
 
 # Visual Studio Code Extensions
 - [rust-analizer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) sucesor de Rust (official-plugin)
