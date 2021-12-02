@@ -38,6 +38,7 @@ https://github.com/markodenic/web-development-resources
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 - [VS Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vs-keybindings) Shortcuts like Visual Studio
 - [Icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) VS Code Icons
+- [Color Picker](https://marketplace.visualstudio.com/items?itemName=anseki.vscode-color) Para Css
 
 ### configuraciones:
 1. Configuración de bindings sobre-escritos
