@@ -200,4 +200,4 @@ Shift + Alt + ´
 - Plantilla email Outlook https://adaptivecards.io/
 
 # Benchmark
-- (Cinebench 15)[https://www.guru3d.com/files-get/cinebench-15-download,1.html] (benchmark tool usado por Nate - for windows)
+- [Cinebench 15](https://www.guru3d.com/files-get/cinebench-15-download,1.html) benchmark tool usado por Nate - for windows
