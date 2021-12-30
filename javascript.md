@@ -1,0 +1,5 @@
+# Shorcuts
+```
+preventDefault = () => { }
+preventDefault(){ }
+```

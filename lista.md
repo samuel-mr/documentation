@@ -41,6 +41,8 @@ https://github.com/markodenic/web-development-resources
 - [Color Picker](https://marketplace.visualstudio.com/items?itemName=anseki.vscode-color) Para Css
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
 
+- [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
+
 ### configuraciones:
 1. Configuración de bindings sobre-escritos
 ```
@@ -74,6 +76,30 @@ https://github.com/markodenic/web-development-resources
         "editorBracketHighlight.foreground6": "#abb2c0",
         "editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
       }
+```
+3. configuración para github copilot
+```
+    {
+        "key": "alt+k alt+j",
+        "command": "editor.action.inlineSuggest.trigger",
+        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "alt+oem_5",
+        "command": "-editor.action.inlineSuggest.trigger",
+        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "alt+k alt+i",
+        "command": "github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated"
+    }
+
 ```
 *** 
 # Google Chrome Extensions:
