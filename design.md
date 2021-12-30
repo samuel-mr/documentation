@@ -62,4 +62,7 @@ https://designsystemsrepo.com/
 - (iOS + Android) Con plantillas predefinidas  https://mockups.pixeltrue.com/
 - De todo un poco: https://www.launchmatic.app
 - Simple y básico: https://screen.traction.one/
+- 
+#### Generate Screenshots in Figma
+- https://www.brandbird.app/?ref=figma-plugin
 

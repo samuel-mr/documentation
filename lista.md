@@ -107,7 +107,7 @@ https://github.com/markodenic/web-development-resources
 - Wappalyzer
 - React Dev Tools
 - Redux Dev Tools
-
+- Markdown Here (agrega un menu contextual para convertir el MD en Html) util para correos rápidos
 ***
 ## IntelliJ
 - https://plugins.jetbrains.com/plugin/9792-key-promoter-x   learn shorcut
@@ -224,3 +224,6 @@ Shift + Alt + ´
 
 ## Email
 - Plantilla email Outlook https://adaptivecards.io/
+
+# Benchmark
+- [Cinebench 15](https://www.guru3d.com/files-get/cinebench-15-download,1.html) benchmark tool usado por Nate - for windows
