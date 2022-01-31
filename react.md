@@ -6,7 +6,7 @@ npm start
 npm run build
 ```
 # paquetes interesantes
-server http para testing
+local http server
 ```
 npm install --global http-server
 // in build folder

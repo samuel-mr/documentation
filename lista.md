@@ -43,6 +43,8 @@ https://github.com/markodenic/web-development-resources
 
 - [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 
+- [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) Resaltador de sintaxis, autocompletado, formateador
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) Resalta en el Workspace los errores y advertencias al ejecutar el linter ESLint
 ### configuraciones:
 1. Configuración de bindings sobre-escritos
 ```
