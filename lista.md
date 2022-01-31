@@ -110,6 +110,7 @@ https://github.com/markodenic/web-development-resources
 - React Dev Tools
 - Redux Dev Tools
 - Markdown Here (agrega un menu contextual para convertir el MD en Html) util para correos rápidos
+- Image Downloader (Pact Interactive) 
 ***
 ## IntelliJ
 - https://plugins.jetbrains.com/plugin/9792-key-promoter-x   learn shorcut
