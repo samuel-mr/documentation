@@ -11,6 +11,9 @@ https://github.com/markodenic/web-development-resources
 - Muestra shorcut presionado (para Presentaciones) http://carnackeys.com/
 - (Windows) Busca archivos con expresiones regulares  https://github.com/stefankueng/grepWin
 
+# Developer
+- [Source Tree](https://www.sourcetreeapp.com/) Git UI free (win + mac)
+
 ## VS
 - https://marketplace.visualstudio.com/items?itemName=martinw.SmartPaster2013
 - https://marketplace.visualstudio.com/items?itemName=ErikEJ.EFCorePowerTools
