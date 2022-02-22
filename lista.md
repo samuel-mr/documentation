@@ -106,6 +106,11 @@ https://github.com/markodenic/web-development-resources
     }
 
 ```
+***
+# IntelliJ
+- [Fill Class](https://plugins.jetbrains.com/plugin/10942-kotlin-fill-class) completa constructor o función con valores por defecto
+- [Key Promoter](https://plugins.jetbrains.com/plugin/9792-key-promoter-x) para aprender los shortcuts
+
 *** 
 # Google Chrome Extensions:
 - JSON Viewer Pro
@@ -115,8 +120,7 @@ https://github.com/markodenic/web-development-resources
 - Markdown Here (agrega un menu contextual para convertir el MD en Html) util para correos rápidos
 - Image Downloader (Pact Interactive) 
 ***
-## IntelliJ
-- https://plugins.jetbrains.com/plugin/9792-key-promoter-x   learn shorcut
+
 ## Wpf
 - Tab que mantiene el VisualTree https://github.com/ControlzEx/ControlzEx#tabcontrolex
 - 
