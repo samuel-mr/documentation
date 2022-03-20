@@ -113,12 +113,21 @@ https://github.com/markodenic/web-development-resources
 
 *** 
 # Google Chrome Extensions:
+### Software & Design
+- VisBug (herramientas para ver y modificar html en vivo)
 - JSON Viewer Pro
 - Wappalyzer
-- React Dev Tools
-- Redux Dev Tools
 - Markdown Here (agrega un menu contextual para convertir el MD en Html) util para correos rápidos
 - Image Downloader (Pact Interactive) 
+- Octotree (show files as explorer)
+- WhatFont
+- ColorZilla
+### Productivity
+- feedly (fav admin)
+### Learn Language
+- Mate Translate (traduce al click)
+- Toucan
+
 ***
 
 ## Wpf

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<DTSConfiguration>
+    <DTSConfigurationHeading>
+        <DTSConfigurationFileInfo GeneratedBy="INTEL\samuel" GeneratedFromPackageName="STG_Validador" GeneratedFromPackageID="{3FF857B1-80CD-4E10-A126-4F87DAE10D9C}" GeneratedDate="08/09/2014 12:44:50 p.m." />
+    </DTSConfigurationHeading>
+    <Configuration ConfiguredType="Property" Path="\Package.Connections[192.168.0.3.DATABASEGENERAL.EntityFrameworkUser1].Properties[ConnectionString]" ValueType="String">
+        <ConfiguredValue>Data Source=192.168.0.3;User ID=IntegrationUser;Initial Catalog=DATABASEGENERAL;Persist Security Info=True;Connection Timeout=60;Application Name=SSIS-Calificaciones-{2C773906-E592-4C1B-BD34-5FEEB138C170}192.168.0.3.DATABASEGENERAL.EntityFrameworkUser1;</ConfiguredValue>
+    </Configuration>
+    <Configuration ConfiguredType="Property" Path="\Package.Connections[192.168.0.3.DATABASEGENERAL.EntityFrameworkUser1].Properties[Password]" ValueType="String">
+        <ConfiguredValue>sqladmin</ConfiguredValue>
+    </Configuration>
+    <Configuration ConfiguredType="Property" Path="\Package.Connections[192.168.0.7.SAIR_STG.sa1].Properties[ConnectionString]" ValueType="String">
+        <ConfiguredValue>Data Source=192.168.0.7;User ID=sa;Initial Catalog=SAIR_STG;Persist Security Info=True;Application Name=SSIS-Calificaciones-{12234632-5A8A-4315-96D6-79F833E6233B}192.168.0.7.SAIR_STG.sa1;</ConfiguredValue>
+    </Configuration>
+    <Configuration ConfiguredType="Property" Path="\Package.Connections[192.168.0.7.SAIR_STG.sa1].Properties[Password]" ValueType="String">
+        <ConfiguredValue>sqladmin</ConfiguredValue>
+    </Configuration>
+</DTSConfiguration>

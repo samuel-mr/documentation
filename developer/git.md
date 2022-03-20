@@ -53,8 +53,16 @@ git merge [branch]              une una rama con la actual (es importante estar 
 
 ## Micelaneos
 ```
+git config --get remote.origin.url  // Get Url
+```
+
+
+## Info
+```
 git log --oneline //muestra donde está el HEAD
 ```
+
+
 
 
 
