@@ -32,7 +32,7 @@ https://github.com/markodenic/web-development-resources
 
 ***
 ## VS Code
-- [Awesome plugins](https://viatsko.github.io/awesome-vscode/#better-align)
+- (Collection) [Awesome plugins](https://viatsko.github.io/awesome-vscode/#better-align)
 - [Beetter Align](https://marketplace.visualstudio.com/items?itemName=wwm.better-align) Code and comments alignment
 - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks) Add Bookmarks
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)  Rename automatically editing tags
@@ -48,6 +48,7 @@ https://github.com/markodenic/web-development-resources
 
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) Resaltador de sintaxis, autocompletado, formateador
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) Resalta en el Workspace los errores y advertencias al ejecutar el linter ESLint
+- [Huachao Mao](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) Rest client as code
 ### configuraciones:
 1. Configuración de bindings sobre-escritos
 ```

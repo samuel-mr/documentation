@@ -1,94 +1,3 @@
-# Rust !
-> Seguridad, concurrencia y rendimiento
-
-## Declaración
-```
-let      => inmutable
-let mut  => mutable
-const PI => inmutable constante
-
-const PI = 3.14
-let mut edad = 54
-
-```
-
-```
-let numero = 2            # implícito
-let numero:i32 = 2        # explícito
-
-let entero = 1            # i32 inferido
-let real   = 1.1          # f64 inferido
-
-let millon = 1_000_000u32 # número más legible
-
-```
-
-## Shadowing
-Capacidad para declara una variable con el mismo nombre en un mismo escope o en un scope interno. La nueva variable reemplazaría a la antigua.
-```
-  let x = 1;
-  {
-      x             // print 1
-      let x = "abc"; 
-      x             // print 'abc'
-  }
-   x                // print 1
-  let x = true;
-  x                 // print true
-```
-
-
-## Operadores
-```
-+ - * /     Numéricos
-
-> < == !=   Relacionales
-
-&&          Lógicos
-||
-
-
-1u32 - 2    !error, desbordamiento, porque el cálculo será negativo y el tipo resultado se infiere q es unsigned 32
-```
-
-## Bloques
-- Las variables se crean, modifican y destruyen dentro de su bloque
-- Una variable está disponible dentro de su bloque y los bloques anidados
-- Una variable no está disponible en un bloque superior
-
-Alcance de las variables
-```
-fn main() {
-    // bloque 'A'
-    {
-        // bloque 'B' ... aquí también están disponibles las variables de 'A'
-        // al finalizar este bloque se eliminarán todas las variables creadas en este bloque 'B'
-    }
-    // aquí ya no están disponible ninguna variable del bloque 'B'
-}
-```
-Bloques con return (como funciones anónimas internas a un fn)
-```
-fn main() {
-  let resultado = {
-      let variable: i32 = 10;
-      variable                // la última línea quiere decir que de esa variable se retornará su VALOR
-  };
-  println!("{}", resultado);  // print: 10
-}
-```
-ejemplo 2
-```
-let resultado = 10;
-let mensaje = if resultado == 10 {
-    String::from("El resultado es 10")  // sin 'return' ni 'punto y coma'
-} else {
-    String::from("El resultado no es 10") // sin 'return' ni 'punto y coma'
-};
-
-println!("{}", mensaje);  // print: El resultado es 10
-```
-
 # TIPOS PRIMITIVOS
 - Primitivos Escalares
 - Primitivos Compuestos
@@ -99,16 +8,31 @@ println!("{}", mensaje);  // print: El resultado es 10
 ```
 i8, i16, i32, i64, i128  enteros positivos y negativos
 u8, u16, u32, u64, u128  enteros positivos
-f32, f64                 flotantes
+f32, f64                 flotantes (float y double en C++)
 char                     UTF-8, podemos colocar emojis
 bool
 ()                       unit type
+
+usize                    tipo entero sin signo del tamaño de puntero
 ```
 
 ### String
 ```
 .to_lowercase()
+.len()
+.ends_with(...)
 ```
+
+### str
+```
+let hello = "Hello, world!";                // implícito
+
+let hello: &'static str = "Hello, world!";  // explícito
+
+// CONVERT
+String::from_str(mayor)     str a String
+```
+
 
 ## Arreglos
 - La longitud es fija
@@ -173,8 +97,8 @@ let tupla: ((i32,bool),(f64,i32));  tuplas anidadas
 tupla.0                             accede a cada elemento por su posición
 
 let (numero, boleano) = (1, true);  desestructuración
-numero    print:1
-boleano   print: true
+numero    // 1
+boleano   // true
 ```
 
 
@@ -193,11 +117,38 @@ match result {
     Response::Error(403, _ ) =>      ,          // si la tupla es Error con el primero parámetro como '403'
     Response::Error(404, _ ) =>      ,
     Response::Error(405, _ ) =>      ,
-    Response::Error( _, mensaje) =>  ,           // si la segunda variable es un string, ingorará la primera variable
+    Response::Error( _, mensaje) =>  ,           // si la segunda variable es un string
 };
+// El guión '_' quiere decir: ignora este parámetro
 ```
 
 ## Estructuras
+- Como las Tuplas pero con nombres, de manera que ya no dependemos del orden sino de nombres
+- Tipos
+    - Tuple struct: es una tupla con nombre
+    ```
+    struct Pair(i32, f32); 
+    
+    //ejemplo: 
+    #[derive(Debug)]
+    struct Color(u32, u32, u32);      // no serán propiedades sino valores de la tupla
+
+    let white = Color(255,255,255);
+
+    println!("El color es: {:?}", white);
+    ```
+    - Struct: la clásica
+    ```
+    struct Point {
+        x: f32,
+        y: f32,
+    }
+    ```
+    - Unit struct: no tiene campos (útil para generics)
+    ```
+    struct Unit;
+    ```
+Uso
 ```
 struct User {
     username: String
@@ -218,53 +169,54 @@ permitir que la información sea mostrada en Debug, ejem: para imprimir los dato
 struct User {
    ...
 ```
-### Estructura tipo Tupla:
-```
-#[derive(Debug)]
-struct Color(u32, u32, u32);      // no serán propiedades sino valores de la tupla
-
-let white = Color(255,255,255);
-
-println!("El color es: {:?}", white);
-```
 
 
 # TIPOS SEGUN LIBRERIA STD
 ## VECTORES
 - Son arrays redimensionables
 - El tamaño no es conocido en tiempo de compilación
-- vec! es un macro para inicializar
 
-Inicialización
+INICIALIZACION
 ```
-let vector           = vec![1,2,3];     Tipo implícito con data
-let vector: Vec<i32> = vec![1,2,3];     Tipo explícito con data
-
-let mut vector: Vec<i32> = Vec::new();  Tipo explícito
- 
-let mut vector = Vec::new();            Tipo postergado: sin tipo en la inicialización, pero...
-vector.push(1);                         gracias a esta línea, en tiempo de diseño se infiere el tipo i32 del vector
-```
-
-```    
 let vector = Vec::new();
-let vector = vec![1, 2, 3];         implícito
-#####let vector: vec<i32> = [1, 2, 3];   explícito
 
 let ...          no modificable
 let mut ...      modificable 
 
+let vector: Vec<i32> = Vec::new();  Tipo explícito
+
+// inicializar usando la macro vec!
+let vector           = vec![1,2,3];     implícito
+let vector: Vec<i32> = vec![1,2,3];     explícito
+
+
+let mut vector = Vec::new();            implícito sin data (pero igualment inferido el tipo por contexto)
+vector.push(1);                         
+   // Tipo postergado: sin tipo en la inicialización, pero...
+   // gracias a que en la siguiente línea se agrega un '1', en tiempo de diseño se infiere el tipo i32 del vector
+```
+METODOS y PROPIEDADES
+```    
 vector[1]       obtiene el elemento de alguna [posición]
 
-METODOS
 .push(1)        agregar al final
 .insert(0, -1)  agrega en (posición, elemento)
 .pop()          elimina el último (por defecto retorna un Option con el elemento eliminado)
 .pop().unwrap() es el pop y además desempaqueta ese elemento eliminado
 .remove(0)      elimina en (posición)
+.windows(x)     retorna un iterador agrupando cada x elementos contiguos
+    ['a','b','c'].windows(2)        // &['a','b']  &['b','c']
+.sort()         
 
+["a", "b"].join("*"), "a*b"         concatena con un comodín
+array[index..index + k].join("");   obtiene un rango de elementos interno y los concatena
 ```
-
+RECORRER
+```
+    for i in vector {
+      
+    }
+```
 
 ## Strings
 ```
@@ -280,9 +232,25 @@ variable.push('.');
 variable.push('.');
 variable.push_str(" !!!");                       print iniciado... !!!
 
-
-// Metodos
+```
+METODOS
+```
 .to_string()                                        convierte srt a String
+```
+CONCATENAR
+```
+let mut owned_string: String = "hello ".to_owned();
+let borrowed_string: &str = "world";
+
+owned_string.push_str(borrowed_string);
+```
+
+raw string
+```
+r#"
+    sirve para poner fácilmente texto normal y espacial (como este: ")
+    en diferentes líneas
+"#
 ```
 
 ## Option
@@ -359,6 +327,9 @@ match resultado {
     Ok(variable) =>     ,       // si es ok
     Err(error) =>       ,       // si hay error
 }
+
+// extensiones
+.expect("Obtiene el valor OK en sí, pero si hay un Error lanzará un Panic y mostrará ESTE MENSAJE")
 ```
 ejemplo 1:
 ```
@@ -403,118 +374,8 @@ let texto   = "12";
 let num:i32 = texto.parse().unwrap();  // parse infiere el tipo destino de la conversión según la declaración de la variable
 ```
 
-
-# FLUJOS DE CONTROL
-
-## Condicionales
-
-```
-if a == b {
-    ...
-} else if a == c {
-    ...
-} else {
-    ...
-}
-```
-
-## Ciclos
-para iterar: loop, for, while
-```
-loop {  }
-
-let numeros = [5, 4, 3, 2, 1];
-for item in numeros.iter() {
-                              // item será cada número
-}
-    
-for item in 1..3 {            // genera un array del 1 al 2 (el último no se considera)
-                              // item será cada número
-}
-
-while [condición] {
-
-}
-
-```
-Alteraciones de los ciclos
-```
-break;      finaliza el ciclo actual
-```
-
-## Match
-~ switch
-```
-match numero {
-    1 =>        ,         si es 1
-    2 =>        ,         
-    3 =>        ,
-    4 | 5 =>    ,          si es 4 o 5
-    6..=10      ,          si está entre el 6 y el 10 (inclusivos)
-    _ => 
-};
-```
-match con return implícito
-```
-let resultado = match numero {  // el string final se asignará a la variable 'resultado'
-    1 => "es uno",              // retorna str
-    _ => "es otro numero"       // retorna str
-};
-```
-
-# FUNCIONES
-```
-fn sumar(a: i32, b: i32) -> i32 {                  Tradicional
-    return a + b;
-}
-
-fn sumar(a: i32, b: i32) -> i32 {                  Simplificado
-    a + b
-}
-
-// ejemplo If Else
-fn factorial(num: i32) -> i32 {                    Tradicional
-    if num == 1 {
-        return num;
-    }
-    return num * factorial_clasico(num - 1);
-}
-
-// ejemplos
-fn factorial(num: i32) -> i32 {                     Simplificado
-    if num == 1 {
-        num
-    } else {
-        num * factorial_simplificado(num - 1)
-    }
-}
-```
-
-## Funciones en Estructuras
-
-```
-struct User {
-    name: String,
-}
-
-impl User {                          // métodos para la estructura 'User'
-    fn execGreeting(&self) {         // selft: para usar internamente las propiedades
-        // self hace referencia a si mismo (como this)
-        println!("Soy {}", self.name); 
-    }
-    fn changeName(&mut self, newName: String) {
-        // &mut -> hace referencia a si mismo y especifica que es modificable
-        self.name = newName;
-    }
-}
-
-// Usando la esctructura y sus métodos
-let mut usu = User {
-    name: String::from("bach"),
-};
-usu.execGreeting();
-usu.name = "mozart".to_string();
-usu.execGreeting();
-usu.changeName("beethoven".to_string());
-usu.execGreeting();
+# ITERATOR
+````
+max_by_key(X)                   obtiene el máximo según X
+    max_by_key(String::len)     obtiene el máximo valor de 'len' (len será calculado en cada item)
 ```

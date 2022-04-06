@@ -2,6 +2,8 @@
 ```
 Enumerable.Range(1, 8)
 
+Array.Empty<Element>
+
 ```
 
 
