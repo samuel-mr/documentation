@@ -6,15 +6,15 @@
 Representa el límite superior del costo del algoritmo. Describe la complejidada para entender el costo. Intenta saber como el algoritmo escalará cuando el tamaño de inputs crezca.
 
 
-| Notación   | Crecimiento      | Ejemplo                     | Descripción                                                                               |
-|-------------|-------------|-------------------------|-------------------------------------------------------------------------------------------|
-| O (1)       | Constante   | x                       | Siempre toma el mismo tiempo                                                              |
-| O (n)       | Lineal      | 10x items = 10xtiempo   | tiempo de ejecución proporcional al tamaño de los datos                                   |
-| O (Log n)   | Logarítmica | 10x items ~ 2x tiempo   | cantidad de trabajo se divide % 2 x cada iteración                                        |
-| O (n Log n) |             | 10x items ~ 20x tiempo  | Divide el problema en varios y luego los recompone (ejem: Quicksort,mergesort, heapsort)  |
-| O ( n^2 )   | Cuadrática  | 10x items = 100x tiempo | Con Loops anidados. Cuando cada elemento debe recorrer todos el array Ejem:(Bubble  sort) |
-| O ( 2^n )   | Exponencial | imagínate!              | Duplica su complejidad por cada elemento. ejem: Fibonaci F(n)=F(n-1)+F(n-2)               |
-| O ( n! )    | Explota!    | ya ni lo pienses        | Crecimiento desmedido. Nunca debería existir.                                                                    |
+| Notación    | Crecimiento | Ejemplo                 | Descripción                                                                              |
+|-------------|-------------|-------------------------|------------------------------------------------------------------------------------------|
+| O (1)       | Constante   | x                       | Siempre toma el mismo tiempo                                                             |
+| O (Log n)   | Logarítmica | 10x items ~ 2x tiempo   | cantidad de trabajo se divide % 2 x cada iteración  . (ejem: binary search)              |
+| O (n)       | Lineal      | 10x items = 10xtiempo   | tiempo de ejecución proporcional al tamaño de los datos   . (ejem: for loop)             |
+| O (n Log n) |             | 10x items ~ 20x tiempo  | Divide el problema en varios y luego los recompone (ejem: Quicksort,mergesort, heapsort) |
+| O ( n^2 )   | Cuadrática  | 10x items = 100x tiempo | Cuando cada elemento debe recorrer todos el array (ejem: dos for anidados, Bubble  sort) |
+| O ( 2^n )   | Exponencial | imagínate!              | Duplica su complejidad por cada elemento. ejem: Fibonaci F(n)=F(n-1)+F(n-2)              |
+| O ( n! )    | Explota!    | ya ni lo pienses        | Crecimiento desmedido (ejem: traveling salesman)                 |
 
 ![image](https://user-images.githubusercontent.com/2782135/160618696-d9478e46-e314-42c6-a00c-40502f937b37.png)
 

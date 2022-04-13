@@ -38,6 +38,7 @@ String::from_str(mayor)     str a String
 - La longitud es fija
 - almacenado en el stack
 - Solo puede almacenar 1 solo tipo de dato
+- Los arrays pueden ser prestados ( como `param `en otra `function` por ejem) como `slice`
 ```
 definicion: [x...z]
 
@@ -66,9 +67,8 @@ metodo(&numeros[1 .. 3]);     PARCIAL: [posición inicial .. posición final]  p
 ```
 
 ## Slices
-
-- Permite prestar una sección de un arreglo
-- No se le conoce el tamaño en tiempo de ejecución
+- Es como un array, pero no se sabe el tamaño en tiempo de compilación
+- Son usados para 'prestar' un corte de un arreglo: Declaración = &[T]
 - Almacenado en el Heap
 ```
     let mensaje = String::from("hola mundo");
@@ -79,6 +79,8 @@ metodo(&numeros[1 .. 3]);     PARCIAL: [posición inicial .. posición final]  p
     let fin= &mensaje[4..mensaje.len()];  // inicia en 4 hasta el final
     let fin= &mensaje[4..];               // idem
 
+
+    fn procesa_slice(slice: &[i32]) {
 ```
 
 ## TUPLAS
@@ -206,7 +208,8 @@ vector[1]       obtiene el elemento de alguna [posición]
 .remove(0)      elimina en (posición)
 .windows(x)     retorna un iterador agrupando cada x elementos contiguos
     ['a','b','c'].windows(2)        // &['a','b']  &['b','c']
-.sort()         
+.sort() 
+.append(&mut otro_vector);         agrega los valores de 'otro_vector', donde este último quedará vacio
 
 ["a", "b"].join("*"), "a*b"         concatena con un comodín
 array[index..index + k].join("");   obtiene un rango de elementos interno y los concatena
@@ -236,6 +239,7 @@ variable.push_str(" !!!");                       print iniciado... !!!
 METODOS
 ```
 .to_string()                                        convierte srt a String
+.split(" ")                                         divide según el texto del parámetro
 ```
 CONCATENAR
 ```
