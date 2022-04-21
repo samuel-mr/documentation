@@ -1,15 +1,25 @@
+# MvvmToolkit 
+> version: >8.0
+
+Class
 ```
-// Class
   public partial class ChartDemoViewModel : ObservableObject
-  { ...
+  { 
+```
+Property
+```
+[ObservableProperty]
+string propiedad;
 
-// Property
-    [ObservableProperty]
-    [AlsoNotifyChangeFor(nameof(PROPERTY))]
-    string variable;
 
-// Command
-    
+[ObservableProperty]
+[AlsoNotifyChangeFor(nameof(total))]
+string variable;
+
+int total => ...
+```
+Command
+```
     [ICommand]
     private void Load()
 ```

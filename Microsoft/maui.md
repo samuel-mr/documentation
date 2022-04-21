@@ -1,5 +1,7 @@
 # MAUI
 
+## Panels
+
 ## Message
 ```
  // namespace Microsoft.Maui.Controls
