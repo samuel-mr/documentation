@@ -2,6 +2,7 @@
 
 ## Package 
 ```
+dotnet add package microsoft.entityframeworkcore       // prefiero tenerlo explicito
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 dotnet add package Microsoft.EntityFrameworkCore.Design
 ```
@@ -41,7 +42,7 @@ package
 ```
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 ```
-example
+example A : configure in class
 ```
 public class BloggingContext : DbContext
 {
@@ -59,6 +60,36 @@ public class BloggingContext : DbContext
         => options.UseSqlite($"Data Source={DbPath}");
 }
 ```
+example B : configure externally
+```
+public class BloggingContext : DbContext
+{
+    ...
+    public string DbPath { get; }
+
+    public BloggingContext(DbContextOptions<CityInfoContext> options) : base(options)
+    {
+    }
+}
+_________________________
+// in Program.cs
+builder.Services.AddDbContext<CityInfoContext>(
+  dbContextOptions => dbContextOptions.UseSqlite("Data Source=blogging.db") //saved in root path of project
+  );
+```
+
+## Configuration in Program.cs
+
+ in appsettings.json
+```
+ "ConnectionStrings": {
+    "CityInfoDBConnectionString" :  "Data Source=CityInfo.db"
+  } 
+```
+get
+```
+ var connectionString = builder.Configuration["ConnectionStrings:CityInfoDBConnectionString"];
+````
 
 # Migrations
 - [documentation](https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli#create-the-database)
@@ -69,8 +100,9 @@ public class BloggingContext : DbContext
     # install Migration Apis
     dotnet add package Microsoft.EntityFrameworkCore.Design
 
-    dotnet ef migrations add InitialCreate
-    dotnet ef database update
+    # (only if you'll used Nuget Package Manager Console in VS)
+    dotnet add package Microsoft.EntityFrameworkCore.Tools
+
     ```
 - info & util
     ```
@@ -97,4 +129,40 @@ public class BloggingContext : DbContext
 - Install in VS
 ```
 DGML editor
+```
+
+# Conventions
+PK
+```
+[Key]
+[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+public int Id { get; set; }
+```
+FK
+```
+[ForeignKey(nameof(CityId))]
+public City City { get; set; }
+public int CityId { get; set; }
+```
+
+
+# Extensions
+in Visual Studio
+```
+- SQLite and SQL Server Compact Toolbox
+    (in VS) Menu: Tools / SQLite and SQL ...
+```
+
+# Querys
+having `City` as `Entity`
+```
+var collection = _context.Cities as IQueryable<City>;
+
+if(name != null)
+{
+  collection = collection.Where(c => c.Name == name);
+}
+
+return await collection
+    .ToListAsync();
 ```

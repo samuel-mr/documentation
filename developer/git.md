@@ -62,8 +62,26 @@ git config --get remote.origin.url  // Get Url
 git log --oneline //muestra donde está el HEAD
 ```
 
+## Miscelaneos
+```
+git diff   # util cuando hago ejemplos
 
 
+```
+## Save Temporaly
+```
+git stash save "message"  // save all changes
+git stash list
+git stash pop             // restore the first and remote it
+```
+
+## Move a commit to another branch
+```
+// 1. destination
+git checkout[destination branch]
+// 2. get
+git cherry-pick [commit-id]
+```
 
 
 // Renombrar: source: https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/
@@ -74,4 +92,11 @@ git branch -m <new_name>
 
 ```
 dotnet new gitignore
+```
+Cambiar a otro commit antiguo en VS
+```
+# en Historial Commits, sobre el commit antiguo: click derecho / checkout (--detach)
+Checkout (--detach)
+# Para volver al ultimo commit real
+git checkout [branchName]
 ```

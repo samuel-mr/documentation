@@ -29,6 +29,8 @@ https://github.com/markodenic/web-development-resources
 - https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager
 - https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
 - https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc
+### Testing
+- [OZ-Code](https://marketplace.visualstudio.com/items?itemName=CodeValueLtd.OzCode)
 
 ***
 ## VS Code
