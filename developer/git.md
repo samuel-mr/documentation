@@ -18,18 +18,20 @@ git clone <url>
 git add -A      stages all changes (igual a ejecutar los 2 siguientes juntos)
 
 git add .       stages new files and modifications, without deletions (on the current directory and its subdirectories).
-
+    > git add --all   like git add . (I don't know the difference)
 git add -u      stages modifications and deletions, without new files
+
 ```
 
 ## Envio y obtención de datos
 ```
 git commit -m "xxxxxxxx"
 git push
+     -u origin [branch-name]    // (si es 1ra vez) crea la rama en remote
+     origin +[branch]           // SI revierto algunos commit localmente, debo hacer FORCE Push, el signo + significa force
 git pull origin [branch]                obtiene rama específica
 
-// SI revierto algunos commit localmente, debo hacer FORCE Push, el signo + significa force
-git push origin +[branch]
+git push 
 
 git branch		                muestra rama actual
 ```
@@ -43,6 +45,12 @@ git checkout -b [newBranchName] crea un nuevo branch y se mueve ahi
 
 git branch -d [branchName]              elimina branch local
 git push origin --delete [branchName]   elimina branch remoto
+
+```
+## Commit 
+```
+git checkout [commitId]          detach HEAD para hacer cambios
+git checkout [branch]            para retornar del estado 'detached'
 
 ```
 
@@ -65,9 +73,20 @@ git log --oneline //muestra donde está el HEAD
 ## Miscelaneos
 ```
 git diff   # util cuando hago ejemplos
+```
+## Undo changes
+```
+git restore .               // deshace todos los cambios (q no están en el stage)
+git checkout -- <file>     // si está modificandose (y no esté en el 'stagging area')
+git reset HEAD <file>      // si está en 'stage' (y aun no fue commiteado)
 
+// si está commiteado (no pusheado) -----------------
+git reset [previuosCommitID]          // elimina los cambios del stage, pero los cambios en si están en modo local (??? aun pendiente probar)
+git reset --hard [previuosCommitID]   // elimina los cambios del stage + archivos modificados = elimina todo el commit completo
+git reset --soft [previousCommitID]   // elimina el commit superior, pero deja los cambios en el stage
 
 ```
+
 ## Save Temporaly
 ```
 git stash save "message"  // save all changes
@@ -82,7 +101,12 @@ git checkout[destination branch]
 // 2. get
 git cherry-pick [commit-id]
 ```
-
+## Solving errors
+```
+// Obtener los commits de otras ramas a mi rama de trabajo actual
+// 1) estando en la otra final a corregir ejem: [branch-001]
+git pull origin [origin-source-branch] 
+```
 
 // Renombrar: source: https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/
 git checkout <old_name>
@@ -98,5 +122,6 @@ Cambiar a otro commit antiguo en VS
 # en Historial Commits, sobre el commit antiguo: click derecho / checkout (--detach)
 Checkout (--detach)
 # Para volver al ultimo commit real
+```
 git checkout [branchName]
 ```

@@ -29,6 +29,7 @@ https://github.com/markodenic/web-development-resources
 - https://marketplace.visualstudio.com/items?itemName=TomEnglert.ResXManager
 - https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
 - https://marketplace.visualstudio.com/items?itemName=sergeb.GhostDoc
+- [Inline Color XAML](https://marketplace.visualstudio.com/items?itemName=NikolaMSFT.InlineColorPicker)
 ### Testing
 - [OZ-Code](https://marketplace.visualstudio.com/items?itemName=CodeValueLtd.OzCode)
 

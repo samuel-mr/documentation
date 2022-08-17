@@ -1,5 +1,9 @@
 ## shortcuts
+```
+"texto"         // frase exacta
+path:*.cs       // extensiones
 `/frase .*  otraFraseSeparada/`
+```
 - /git.*push/ 
 
 ```

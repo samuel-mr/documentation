@@ -33,7 +33,47 @@ _interface.Query<string>()
  var resultA = await _interface.Query<string>(); // will return DATA_VERSION_A
  var resultB = await _interface.Query<string>(); // will return DATA_VERSION_B
 ```
+testing Logger (net6)
+```
+var logger = Substitute.For<MockLogger<UpdateCustomer>>();
 
+ .SetLogger(logger)
+
+ 
+// Assert
+logger.Received(1).Log(LogLevel.Critical, expected);
+```
+
+example:
+```
+
+            [Fact]
+            public async Task CustomerSettings_WithoutIntegrations_ShouldLogErrorMessage()
+            {
+                // Arrange
+                var logger = Substitute.For<MockLogger<UpdateCustomer>>();
+
+                var customerUpdateConsumer = CustomerUpdateConsumer_Builder
+                    .Init()
+                    .Default(_variables)
+                    .SetCompanySettingsRepository(null!)
+                    .SetLogger(logger)
+                    .Build();
+                var context = ConsumeContextBuilder.CreateContext_AsNotUK();
+
+                // Act
+                await customerUpdateConsumer.Consume(context);
+
+                // Assert
+                var expected = @"[SalesForce] CustomerUpdateConsumer
+CompanyID 00000000-0000-0000-0000-000000000000
+Error: Object reference not set to an instance of an object.
+StackTrace:    at AQ.Salesforce.App.Consumers.CustomerUpdateConsumer.Consume(ConsumeContext`1 context) in W:\Proyects\NVC\EE_AQ_CPQ\Connectors\Salesforce\App\Consumers\CustomerUpdateConsumer.cs:line 44
+Content: UpdateCustomer { Vendor = Vendor { Name = , CompanyId = , Id = , Server =  }, IsUK = False, AccountId = 00000000-0000-0000-0000-000000000000, CustomerId =  }
+";
+                logger.Received(1).Log(LogLevel.Critical, expected);
+            }
+```
 # Coverlet
 - [Coverlet integration with VSTest](https://raw.githubusercontent.com/tonerdo/coverlet/master/Documentation/VSTestIntegration.md)
 ## Basic

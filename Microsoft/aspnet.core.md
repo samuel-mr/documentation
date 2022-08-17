@@ -47,8 +47,8 @@ builder.Services.AddControllers()
 ## Result
 Generic
 ```
-    public async Task<IActionResult> Get(...
-    public async Task<ActionResult<Entidad>> Get(...
+    public async Task<IActionResult> Get(...          # we can use Ok(), NotFound(), etc
+    public async Task<ActionResult<Entidad>> Get(...  # recommended for Swagger 
 ```
 JsonResult
 ```
@@ -58,7 +58,7 @@ public JsonResult GetCities()
     return new JsonResult(CitiesDataStore.Current.Cities);
 }
 ```
-ActuonResult (allow return multiple status code)
+ActuonResult (allow return multiple status code, recommended)
 ```
 [HttpGet("{id}")]
 public ActionResult<CityDto> GetCitie(int id)
@@ -79,6 +79,7 @@ From:
           [FromBody] T parameter  // explicit
           T parameter             // implicit: infered only of T is a class
     - Header
+          [FromHeader]
     - Query (string parameters)
           [FromQuery] string? name                        // default
           [FromQuery(Name ="anotherName")] string? name   // custom name
@@ -163,3 +164,16 @@ Microsoft.AspNetCore.Authentication.JwtBearer
 https://github.com/dotnet/aspnetcore/blob/v6.0.0/src/DefaultBuilder/src/WebHost.cs
 ```
 - [providers](https://docs.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli)
+
+# Documentation
+
+### Swashbuckle.AspNetCore
+- Generate OpenAPI specification from your api
+- Wraps Swagger-UI and provides an embedded version of it
+- [repo](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)
+```
+dotnet add package --version 6.4.0 Swashbuckle.AspNetCore
+```
+
+### NSwag
+- [official](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-6.0&tabs=visual-studio)
