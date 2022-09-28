@@ -5,31 +5,58 @@
 ```
 
 # General
-| Shortcut                    | Description     |
-|-----------------------------|-----------------|
-| Ctrl + Shif + h             | Find + replace  |
-|                             |                 |
-| Alt + Shift + Page up/down  | Next error      |
-| Ctrl + Shif + Alt + up/down | Move block code |
+| Shortcut                    | Description                   |
+|-----------------------------|-------------------------------|
+| Ctrl + shif + h             | Find + replace                |
+|                             |                               |
+| Alt + shif + Page up/down   | Next error                    |
+| Ctrl + shif + Alt + up/down | Move block code               |
+| Ctrl + shif + A             | Show menu to search an ACTION |
+
+# Structure
+| Shortcut         | Description  |
+|------------------|--------------|
+| Ctrl + Alt + Ins | Add new file |
+
+# Selection
+| Shortcut        | Description              |
+|-----------------|--------------------------|
+| Ctrl + w        | Select in context (more) |
+| Ctrl + shif + w | Select in context (less) |
+
+# Collapse
+| Shortcut     | Description     |
+|--------------|-----------------|
+| Ctrl + m + m | Toggle Collapse |
+| Ctrl + m + a | Collapse All    |
+| Ctrl + m + x | Expand All      |
 
 # Navigate
-| Shortcut        | Description                |
-|-----------------|----------------------------|
-| Ctrl + ,        | Show recently viewed files |
-| Ctrl + Shif + E | Show all position          |
+| Shortcut                 | Description                           |
+|--------------------------|---------------------------------------|
+| Ctrl + ,                 | Show recently viewed files            |
+| Ctrl + shif + E          | Show all position                     |
+| Ctrl + -                 | Navigate back                         |
+| Alt + Up                 | Navigate top method                   |
+| Alt + Down               | Navigate next method                  |
+| Alt + Shift + F12        | Show usages                           |
+| Ctrl + -                 | Navigate back                         |
+| Ctrl + shift + -         | Navigate forward                      |
+| Ctrl + shift + arrowUp   | Navigate to next ocurrance (text)     |
+| Ctrl + shift + arrowDown | Navigate to previous ocurrance (text) |
 
 # Refactors
-| Shortcut        | Description        |
-|-----------------|--------------------|
-| Ctrl + Shif + R | Show all refactors |
-| Ctrl + R + F    | Introduce varible  |
+| Shortcut        | Description           |
+|-----------------|-----------------------|
+| Ctrl + shif + R | Show all touched code |
+| Ctrl + R + F    | Introduce varible     |
 
 # IDE
 
 | Shortcut          | Description                      |
 |-------------------|----------------------------------|
-| Ctrl + Shif + F12 | Toggle all panels                |
-| Alt + Shif + L    | Locate file in Solution Explorer |
+| Ctrl + shif + F12 | Toggle all panels                |
+| Alt + shif + L    | Locate file in Solution Explorer |
 
 # Rider
 

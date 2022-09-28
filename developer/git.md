@@ -107,10 +107,20 @@ git cherry-pick [commit-id]
 // 1) estando en la otra final a corregir ejem: [branch-001]
 git pull origin [origin-source-branch] 
 ```
+Clean (pending to ingestigate more)
+```
+git clean -fdx
+```
 
 // Renombrar: source: https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/
 git checkout <old_name>
 git branch -m <new_name>
+
+## Change repo
+```
+# in the current repo, only change the remote, then, push
+git remote set-url origin <url.git>
+```
 
 # Visual Studio
 

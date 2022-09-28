@@ -2,7 +2,15 @@
 basic
 ```
 az login --allow-no-subscriptions  //login with tenant level access
-az login --tenant [tenantId]
+az login --tenant [tenantId] (aveces no se ve el tenanId, pero tenantId = DirectoryId ... tons ir al Portal: from Portal Settings / Directory + Subscriptions)
+```
+basic (to Rider)
+```
+# see the default tenant
+az account list
+
+# set the default tennant (Rider needs the correct Tenant as default)
+az account set --subscription [tenantId]
 ```
 Miscelaneos
 ```

@@ -52,6 +52,7 @@ https://github.com/markodenic/web-development-resources
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) Resaltador de sintaxis, autocompletado, formateador
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) Resalta en el Workspace los errores y advertencias al ejecutar el linter ESLint
 - [Huachao Mao](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) Rest client as code
+- [Excel Viewer](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)
 ### configuraciones:
 1. Configuración de bindings sobre-escritos
 ```
