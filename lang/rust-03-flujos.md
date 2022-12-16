@@ -55,7 +55,10 @@ tipos de iteración
  for item in numeros {}          // internalmente es: numeros.into_iter()
  
 ```
-
+iteración + posición
+```
+for (num, i) in nums.iter().enumerate()
+```
 ## Match
 ~ switch
 ```

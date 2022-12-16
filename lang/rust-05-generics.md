@@ -13,3 +13,17 @@ Aplicado en -> functions, structs
         T: std::cmp::PartialOrd + std::marker::Copy
     {
     ```
+
+Restringir parámetros indicando que interfaz debe implementar
+```
+use std::string::ToString;
+
+// item será de un tipo que ha implementado el 'Trait' ToSring
+fn super_metodo<T: ToString> (item: &T) -> String {
+    item.to_string()
+}
+
+// uso
+println!("{}", super_metodo(&42));
+println!("{}", super_metodo(&"hello"));
+```

@@ -25,3 +25,10 @@ query filters:
 #Warnings
 | where severityLevel == 2
 ```
+
+# Azurite
+Default Storage Account [official](https://github.com/Azure/Azurite#usage-with-azure-storage-sdks-or-tools)
+```
+Account name: devstoreaccount1
+Account key: Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==
+```

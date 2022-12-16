@@ -28,6 +28,10 @@ let real   = 1.1          # f64 inferido
 let millon = 1_000_000u32 # número más legible
 
 ```
+varias en 1 línea
+```
+    let (a, b, c) = (0, 0, 0);
+```
 
 ## Shadowing
 Capacidad para declara una variable con el mismo nombre en un mismo escope o en un scope interno. La nueva variable reemplazaría a la antigua.
@@ -126,17 +130,6 @@ println!("{}", mensaje);  // print: El resultado es 10
 
 > debug_assert! solo se compila en debug-time, caso contrario es omitido
 
-## Test
-- Omitidos en la compilación
-```
-#[test]
-fn test_mcd(){
-```
-
-```
-cargo test      // ejecuta todos los test
-```
-
 ## Atributos
 - Agregan información adicional a una función
 - También le dicen a Rust como poder interactuar con otros lenguajes
@@ -144,6 +137,32 @@ cargo test      // ejecuta todos los test
     ```
     #[test]
     fn ...
+    ```
+
+## Test
+- Omitidos en la compilación
+- Ejem:
+    ```
+    #[test]
+    fn test_mcd(){
+    ```
+    runing test
+    ```
+    cargo test
+    ```
+- Test panic?
+    ```
+    #[test]
+    #[should_panic]
+    fn ...
+
+    #[test]
+    #[should_panic(expected = "Divide result is zero")]
+    fn ...
+    ```
+- Ignorar
+    ```
+    #[ignore]
     ```
 # Importar
 
@@ -161,8 +180,8 @@ use actix_web::{HttpResponse, ...};
 HttpResponse
 ```
 ## Trait
-- Colección de métodos que pueden ser implementados por los tipos.
-- Ejem: todos los tipos que implementan `FromStr` tienen el nombre `from_str`
+- Interfaz (aunq más como una clase abstracta).
+- Ejem: todos los tipos que implementan `FromStr` tienen el método `from_str`
     ```
     use std::str::FromStr;
 
@@ -186,4 +205,9 @@ cargo run param1 param2 etc     # ...y envía parámetros
 ## Ciclo de vida del programa
 ```
 std::process::exit(1);      // finaliza el programa con el estado 'error': 1= error
+```
+
+## Helpers
+```
+return Default::default();
 ```

@@ -41,8 +41,8 @@ git branch		                muestra rama actual
 git checkout [commitId]         cambia los archivos a ese commit
 git checkout main               cambia los archivos a main (a la posicion actual)
 git checkout -b [newBranchName] crea un nuevo branch y se mueve ahi
-
-
+git branch branch_name <commit-hash>  crea nuevo branch en base a otro commit
+git checkout -b myFeature anotherBranch  crea nuevo branch en base a otro branch
 git branch -d [branchName]              elimina branch local
 git push origin --delete [branchName]   elimina branch remoto
 

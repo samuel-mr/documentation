@@ -5,10 +5,11 @@
 
  ## Rustup tool
  ```
- rustup show        # General info
+rustup show        # General info
 rustup update      # update Rust installation
 rustup doc --std   # open offline documentation
  ```
+
  [Managing diferent version](https://doc.bccnsoft.com/docs/rust-1.36.0-docs-html/edition-guide/rust-2018/rustup-for-managing-rust-versions.html)
 
 ## Check current installation
@@ -23,7 +24,9 @@ rustdoc --version
 - `rustdoc`: Herramienta de documentación de Rust. Genera un HTML de los comentarios que agreguemos al código
 
 # Definiciones
-- Crate: Librería o ejecutable
+- Crate: Librería o ejecutable. Es una unidad de compilación. Reutilizable.
+- Módulos: Administra ámbitos de código dentro de un crate
+- Rutas: Dan nombre a los elementos del código. ejem: vector, función, módulo
 
 # VS Code
 ## Config
