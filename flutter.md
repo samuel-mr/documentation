@@ -10,6 +10,8 @@
 - [Bracket Pair Toggler](https://marketplace.visualstudio.com/items?itemName=dzhavat.bracket-pair-toggler)
 - [Better Coments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
 
+## Top Controls
+- MediaQuery: Obtiene alto, ancho de la pantalla
 # Commands
 ```
 flutter --version
@@ -26,6 +28,22 @@ mainAxisAlignment: MainAxisAlignment.center,
 ```
 Stack                   // permite  uno sobre otro
 ```
+## Definición de tamaños
+| Control          | 'Height' definido por |
+|------------------|-----------------------|
+| Column           | hijos                 |
+| ListView.builder | padre                 |
+
+- Al menos el padre o el hijo debe saber 
+- Escenario: Padre e hijo con 'height indeterminado  <span style="color:red">no compilará</span>
+
+         
+        // El problema es que tanto el padre como el hijo esperan del uno al otro para definir su 'height'
+        Column(
+                children: [
+                ListView.builder...
+         
+
 # Controls
 ```
 SizedBox (like Box)
@@ -71,15 +89,19 @@ Container(
             borderRadius: _borderRadius,
           ),
 
-// boton que ocupa todo el ancho de la pantalla => width: double.infinity
-ElevatedButton(
-        onPressed: () {},
-        child: SizedBox(
+```
+## Add Borders
+```
+ClipRRect(
+            borderRadius: BorderRadius.circular(5),
+            child: FadeInImage(
+              fit: BoxFit.cover //  WARNING: no se aun porque pero solo con esta propiedad se nota el 'borde circular'
+```
+## Recipies
+Ocupa todo el ancho de la pantalla => width: double.infinity
+```
+SomeControl(
         width: double.infinity,
-        child: Text('Guardar'),
-        ),
-        )
-
 ```
 ## Controls - scroll when overflow
 Genera un scroll si el hijo supera el tamaño de la pantalla
@@ -102,6 +124,13 @@ Genera un scroll si el hijo supera el tamaño de la pantalla
                     child: SingleChildScrollView(
                         child: Image(
 ```
+### Lists
+
+| Shortcut              | When use it?                 |
+|-----------------------|------------------------------|
+| Column                | Hijos con el mismo 'height'  |
+| SingleChildScrollView | Hijos con diferente 'height' |
+
 ### ListTile vs NO ListTile
 - Checkbox vs CheckboxListTile : el segundo tiene todo el row como área clickeable para ser seleccionado
 - Switch   vs SwitchListTile   : idem que el anterior
@@ -161,4 +190,13 @@ FocusScope.of(context).requestFocus();
 Obtener Ancho y Alto de la pantalla
 ```
     final size = MediaQuery.of(context).size;
+```
+
+# Theme
+1. Modificacion en `build`
+```
+Widget build(BuildContext context) {
+    return MaterialApp(
+        theme: ThemeData.light()
+            .copyWith(appBarTheme: AppBarTheme(color: Colors.red)));
 ```

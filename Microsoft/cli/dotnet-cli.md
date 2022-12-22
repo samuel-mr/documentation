@@ -37,3 +37,12 @@ dotnet add .\Resocentro.NewMedical.Infraestructure\Resocentro.NewMedical.Infraes
 dotnet build -v 
     q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic]
 ```
+
+## PowerShell
+- Para ejecutar en ruta relativa
+    ```powershell
+    # - go final path
+    # - edit .ps1 file
+    # - run
+    Invoke-Expression -Command "& 'W:\Learn\PowerShell\dotnet-create-projects.ps1'"
+    ```
