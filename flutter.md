@@ -34,8 +34,8 @@ Stack                   // permite  uno sobre otro
 | Column           | hijos                 |
 | ListView.builder | padre                 |
 
-- Al menos el padre o el hijo debe saber 
-- Escenario: ⚠️Padre e hijo con 'height indeterminado  <span style="color:red">no compilará</span>
+- ⚠️ Al menos el padre o el hijo debe saber su 'height'
+- Escenario: Padre e hijo con 'height indeterminado. ❗no compilará❗
 
          
         // El problema es que tanto el padre como el hijo esperan del uno al otro para definir su 'height'
