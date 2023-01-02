@@ -50,4 +50,4 @@ Ocultar archivos generados de compilación
 - [crates](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates) Da información sobre las dependencias que usan Cargo.toml
 - [Search crates.io](https://marketplace.visualstudio.com/items?itemName=belfz.search-crates-io) Muestra sugerencias de bibliotecas mientras se escribe en Cargo.toml
 - [Rust Test Explorer](https://marketplace.visualstudio.com/items?itemName=swellaby.vscode-rust-test-adapter) Muestra el explorador de test para Rust
-
+- [Add semicolon](https://marketplace.visualstudio.com/items?itemName=vmsynkov.colonize) Agregar punto y coma (alt + enter)

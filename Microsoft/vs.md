@@ -13,3 +13,4 @@
 | Shortcut            | Description     |
 |---------------------|-----------------|
 | Ctrl + Shif + Arrow | To another uses |
+| Ctrl + Shif + Arrow | To another uses |
