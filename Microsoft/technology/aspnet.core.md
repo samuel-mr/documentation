@@ -110,8 +110,15 @@ public Service(IConfiguration configuration)
 {
   _field = configuration["node:property"];
 
-
 ```
+into a class
+```
+
+        public MyConstructor(IServiceProvider serviceProvider)
+        {
+            var instance = serviceProvider.GetService(typeof(SomeInjectedClass));
+```
+
 # Login
 
 in `appsettings.json`

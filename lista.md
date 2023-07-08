@@ -116,6 +116,7 @@ https://github.com/markodenic/web-development-resources
 # IntelliJ
 - [Fill Class](https://plugins.jetbrains.com/plugin/10942-kotlin-fill-class) completa constructor o función con valores por defecto
 - [Key Promoter](https://plugins.jetbrains.com/plugin/9792-key-promoter-x) para aprender los shortcuts
+- [plantuml-integration](https://plugins.jetbrains.com/plugin/7017-plantuml-integration) Diagramas PlantUML integrados
 
 *** 
 # Google Chrome Extensions:
@@ -128,6 +129,7 @@ https://github.com/markodenic/web-development-resources
 - Octotree (show files as explorer)
 - WhatFont
 - ColorZilla
+- Vytal (spoof timezone)
 ### Productivity
 - feedly (fav admin)
 ### Learn Language

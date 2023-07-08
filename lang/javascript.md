@@ -50,3 +50,11 @@ Null + ejecutar código
 !!null && 'codigo a ejecutar'
 
 ```
+Array
+```
+Array.from({ length: 5 }, () => console.log("Mensaje"));
+```
+Find
+```
+    const foundPerson = persons.find(person => person.name === name);
+```
