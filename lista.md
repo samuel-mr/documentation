@@ -46,6 +46,7 @@ https://github.com/markodenic/web-development-resources
 - [Icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) VS Code Icons
 - [Color Picker](https://marketplace.visualstudio.com/items?itemName=anseki.vscode-color) Para Css
 - [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+- [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) Git + steroides
 
 - [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 

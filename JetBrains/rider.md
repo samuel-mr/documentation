@@ -32,18 +32,19 @@
 | Ctrl + m + x | Expand All      |
 
 # Navigate
-| Shortcut                 | Description                           |
-|--------------------------|---------------------------------------|
-| Ctrl + ,                 | Show recently viewed files            |
-| Ctrl + shif + E          | Show all position                     |
-| Ctrl + -                 | Navigate back                         |
-| Alt + Up                 | Navigate top method                   |
-| Alt + Down               | Navigate next method                  |
-| Alt + Shift + F12        | Show usages                           |
-| Ctrl + -                 | Navigate back                         |
-| Ctrl + shift + -         | Navigate forward                      |
-| Ctrl + shift + arrowUp   | Navigate to next ocurrance (text)     |
-| Ctrl + shift + arrowDown | Navigate to previous ocurrance (text) |
+| Shortcut                 | Description                                        |
+|--------------------------|----------------------------------------------------|
+| Ctrl + ,                 | Show recently viewed files                         |
+| Ctrl + shif + E          | Show all position                                  |
+| Ctrl + -                 | Navigate back                                      |
+| Alt + Up                 | Navigate top method                                |
+| Alt + Down               | Navigate next method                               |
+| Alt + Shift + F12        | Show usages                                        |
+| Ctrl + -                 | Navigate back                                      |
+| Ctrl + shift + -         | Navigate forward                                   |
+| Ctrl + shift + arrowUp   | Navigate to next ocurrance (text)                  |
+| Ctrl + shift + arrowDown | Navigate to previous ocurrance (text)              |
+| Alt + Ins                | Navigate to upper folder (Show as contextual menu) |
 
 # Refactors
 | Shortcut        | Description           |
