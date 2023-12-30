@@ -46,3 +46,15 @@ dotnet build -v
     # - run
     Invoke-Expression -Command "& 'W:\Learn\PowerShell\dotnet-create-projects.ps1'"
     ```
+
+# Run watch (multple .Net versions)
+- In root, add `global.json` 
+    - version: to avoid Cmd use the lastes installed version
+- dotnet watch run --framework net6.0
+```
+{
+  "sdk": {
+    "version": "6.0.407" 
+  }
+}
+```

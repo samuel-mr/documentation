@@ -1,5 +1,4 @@
-#
-Comandos comunes
+# Comandos comunes
 ```
 npm install // instala todas las dependencias del archivo package.json
 npm start
@@ -196,6 +195,13 @@ init        : recibe el estado para inicializar
 ```
 # Test (Enzyme)
 
+- Consejos generales:
+    1. Cuando pruebes algo que tomará cierto tiempo en 'procesar' has un 'expect' para que se asegure que ya se procesó
+        ```javascript
+        await userEvent.click(await screen.findByText("SOME_NAME"));
+        expect(await screen.findByText("SOME_NEW_CONTENT")).toBeInTheDocument();
+        ```
+
 ### Cycles : Se reejecuta por cada test (para limpiar variables globales)
 ```
 beforeEach(() =>{
@@ -244,7 +250,16 @@ expect(wrapper).toMatchSnapshot()
 
 expect(HTML_ELEMENT.prop('PROPERTY')).toBe(...)
 ```
+#### Search > Search : lookup from parent component
+```javascript
+// get the edit form
+let form = screen.queryByTestId("household-form-edit");
+expect(form).toBeInTheDocument();
 
+// click in Edit button
+await userEvent.click(await within(form).getByText("Edit", { selector: "button" }));
+
+```
 # Test (React Hooks)
 ```
 npm install --save-dev @testing-library/react-hooks
@@ -273,8 +288,29 @@ Create element based on another
 ```
 styled(div)`
 ```
+Chained styles (cascade)
+```javascript
+const AA = styled.div`
+& > div > button {
+    background: red;
+  }
+  ...
+   <AA>
+      <div>
+        <button> // applied red background
+```
+Chained style (elements)
+```javascript
+const AA = styled.div`
+ div[role="tablist"] > button {
+    background: red;
+  }
+```
+
+
 
 # Testing library
+- [doc](https://testing-library.com/docs/queries/about/)
 ```
 # Buscan solo 1 elemento. Lanza error si encuentra más de 1
 getBy
@@ -309,10 +345,99 @@ By TestId
 <Element data-testid='uuu' />
 screen.getByTestId(('uuu'))
 ```
-
+// some samples
 ```
-// some eamples
  benefitsInput = screen.getByRole('combobox', { name: /Пільги %/ })
+ ```
+ To see all generated code in UI
+ ```
+ screen.logTestingPlaygroundURL();
  ```
  # Good Practice
  
+ # Debug
+ Timer
+```
+console.time('filter array');
+const visibleTodos = getFilteredTodos(todos, filter);
+console.timeEnd('filter array');
+```
+
+# Tips
+Props
+```javascript
+
+// Error (because props could override previous properties)
+<SomeComponent
+  property1=...
+  property2=...
+  {...props} 
+
+// OK
+<SomeComponent
+  {...props}
+  property1=...
+  property2=...
+```
+
+Async nature of React's state
+```javascript
+// Wrong (because the 'value' will be updated later, its in a queue)
+setValue(value+1);
+onSendTheNewValue(value);
+
+// OK
+let newValue = value + 1;
+setValue(newValue);
+onSendTheNewValue(newValue)
+```
+useState: in Childre and what happen if the value is changed in fater
+```c#
+const Fater() => {
+
+    const [text, setText] = 'A'
+   return (
+    <Child someProp={text} />
+    <Button onClick={() => setText('B')}    // ERRor : this action won't change 'someProp' in the Child component
+  )
+}
+const Child(someProp) => {
+    const [prop, setProp] = useState(someProp); // useState only init once, future change in parent component won't be reflected
+}
+```
+change property content
+```
+// value
+setCurrentValue( prep => (!prep));
+// objec
+setItems(prevItems => ({
+      ...prevItems,
+      somePropA: "a",
+      somePropB: "b"
+    }));
+```
+Add properties conditionally
+```
+let myObject = {
+      propA: "1",
+      ...(condition) && {
+        propB : "2",
+```
+# Enums
+    - Object.freeze to be each item inmutable
+```
+  const states = Object.freeze({
+    Default: Symbol("default"),
+    Discarding : Symbol("discarding"),
+    Disenrolling : Symbol("disenrolling"),
+  });
+```
+Conditional rendering, getIsSorted return asc or desc
+```ts
+{
+    {
+        asc: <ArrowUpIcon boxSize={5} />,
+        desc: <ArrowDownIcon boxSize={5} />,
+    }[header.column.getIsSorted() as string] ?? null
+}
+```
