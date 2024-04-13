@@ -1,0 +1,5 @@
+# React
+- [npm-check](https://www.npmjs.com/package/npm-check) Muestra sugerencias de actualización para cada paquete npm instalado.
+- [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) Muestra sugerencias de actualización de paquetes pero en un formato reducido. Permite actualizar masivamente. [video](https://www.youtube.com/watch?v=0XQXGx3lLaU)
+## VS Code
+- [Npm version viewer](https://versionlens.net/) Ver la ultima version en package.json

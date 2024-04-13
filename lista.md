@@ -54,6 +54,7 @@ https://github.com/markodenic/web-development-resources
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) Resalta en el Workspace los errores y advertencias al ejecutar el linter ESLint
 - [Huachao Mao](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) Rest client as code
 - [Excel Viewer](https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer)
+
 ### configuraciones:
 1. Configuración de bindings sobre-escritos
 ```
@@ -116,6 +117,7 @@ https://github.com/markodenic/web-development-resources
 # IntelliJ
 - [Fill Class](https://plugins.jetbrains.com/plugin/10942-kotlin-fill-class) completa constructor o función con valores por defecto
 - [Key Promoter](https://plugins.jetbrains.com/plugin/9792-key-promoter-x) para aprender los shortcuts
+- [plantuml-integration](https://plugins.jetbrains.com/plugin/7017-plantuml-integration) Diagramas PlantUML integrados
 
 *** 
 # Google Chrome Extensions:
@@ -128,6 +130,7 @@ https://github.com/markodenic/web-development-resources
 - Octotree (show files as explorer)
 - WhatFont
 - ColorZilla
+- Vytal (spoof timezone)
 ### Productivity
 - feedly (fav admin)
 ### Learn Language

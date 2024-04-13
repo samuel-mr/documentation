@@ -26,9 +26,12 @@ git add -u      stages modifications and deletions, without new files
 ## Envio y obtención de datos
 ```
 git commit -m "xxxxxxxx"
+
+
 git push
      -u origin [branch-name]    // (si es 1ra vez) crea la rama en remote
      origin +[branch]           // SI revierto algunos commit localmente, debo hacer FORCE Push, el signo + significa force
+     origin HEAD             // HEAD = current branch
 git pull origin [branch]                obtiene rama específica
 
 git push 
@@ -110,6 +113,11 @@ git pull origin [origin-source-branch]
 Clean (pending to ingestigate more)
 ```
 git clean -fdx
+
+# Clean algun archivo 'pegado' que supeustameinte tiene cambios pero no tiene naa'
+git checkout pathtofile
+# All files
+git checkout .
 ```
 
 // Renombrar: source: https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/

@@ -1,11 +1,16 @@
 # Azure Cli
 basic
 ```
+az login --use-device-code   // not local browser neccesarilly
+
 az login --allow-no-subscriptions  //login with tenant level access
 az login --tenant [tenantId] (aveces no se ve el tenanId, pero tenantId = DirectoryId ... tons ir al Portal: from Portal Settings / Directory + Subscriptions)
 ```
 basic (to Rider)
 ```
+# to validate current login
+az account show
+
 # see the default tenant
 az account list
 

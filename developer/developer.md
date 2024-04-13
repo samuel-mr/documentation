@@ -36,3 +36,6 @@
 
 - Public URL from local https://ngrok.com
 - 
+
+# Mock service
+- https://beeceptor.com/ Deploy mock api easily, super dynamic. [demo using](https://youtu.be/41NOoEz3Tzc?si=mPinJN3_BKWsl3qr&t=2190)

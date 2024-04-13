@@ -44,7 +44,8 @@ Ocultar archivos generados de compilación
 ```
 ## Extensions
 - [rust-analizer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) sucesor de Rust (official-plugin)
-- [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) Debuguer nativo de C++, Rust y otros lenguajes compilados
+- [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) Debuguer nativo de C++, Rust y otros lenguajes compilados (Linux, peero yo lo usé en win sin problems)
+- [C++ debugger](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) Debugger pa Windows
 - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) Resealta en la misma línea de código los mensajes de error y advertencias
 - [better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml) formateador y resaltador de sintaxis para los archivos de configuración de Rust (Cargo.toml)
 - [crates](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates) Da información sobre las dependencias que usan Cargo.toml

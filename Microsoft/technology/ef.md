@@ -117,6 +117,26 @@ get
     dotnet ef database update       # exec last migration
         -v                          # verbose : show details
     ```
+    - Some required basic structure:
+      ```
+      var configuration = builder.Configuration;
+      builder.Services.AddDbContext<HangContext>(options =>
+      {
+          options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+      });
+      ...
+      public class Persona
+      {
+          public int Id { get; set; }
+          public string Name { get; set; }
+      }
+      public class HangContext : DbContext
+      {
+          public HangContext(DbContextOptions<HangContext> options) : base(options)
+          {}
+          public DbSet<Persona> Personas { get; set; }
+      }
+      ```
 - tooling
     ```
     dotnet ef dbcontext scaffold        # reverse engineer
