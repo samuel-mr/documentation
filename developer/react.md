@@ -252,3 +252,16 @@ expect(loading).toBeTruthy()
 ```
 
 # Publish GitHub
+
+# Best Practice
+- destructuring over props
+```
+// bad practice
+function SomeFunc(props){
+    //maybe you have: props.someSecretKey
+    {Json.Stringify(props)} // security risk!
+}
+// ok
+function SomeFunc({param1,param2})
+    ...
+```
