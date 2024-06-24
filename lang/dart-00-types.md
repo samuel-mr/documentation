@@ -48,6 +48,9 @@ Strings
 // print
   'hola $nombre'       // direct
   'name: ${this.name}' // with two values
+
+  List<String> palabras = ["a", "b", "c"];
+  palabras.join(" "); // abc
 ```
  # Import
  ```
@@ -99,3 +102,31 @@ Future<String> get() async{
 2
 3
  ```
+ # Nullable
+```
+class SomeClass{
+  int/*!*/ someId;
+  String? character;
+  int? number;
+
+  SomeClass({
+    required this.someId,
+    this.character,
+    this.number,
+    ...
+  })
+  ...
+``` 
+# Loop
+```dart
+for (int i = 0; i < n.length; i++) {
+  print(n[i]);
+}
+
+for (int number in numbers) {
+  print(number);
+}
+numbers.forEach((number) {
+  print(number);
+});
+```

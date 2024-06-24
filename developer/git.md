@@ -81,6 +81,7 @@ git diff   # util cuando hago ejemplos
 ```
 git restore .               // deshace todos los cambios (q no están en el stage)
 git checkout -- <file>     // si está modificandose (y no esté en el 'stagging area')
+git checkout -- . // same + all files
 git reset HEAD <file>      // si está en 'stage' (y aun no fue commiteado)
 
 // si está commiteado (no pusheado) -----------------

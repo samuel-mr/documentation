@@ -12,11 +12,34 @@
 
 # Commands
 ```
+# Important
+flutter clean
+flutter pub get
+flutter build apk
+
+# Run
+flutter run -d chrome
+
+#General
 flutter --version
 flutter doctor
+flutter doctor --android-licenses  # just to confirm some aditional licences
+flutter devices  # you must see your phone (usb)
+flutter upgrade
+
+# pubspec
+flutter pub add ...
+flutter pub get       # install current v
+flutter pub outdated  # display outdated libs
+flutter pub upgrade   # To update to the latest compatible versions of all the dependencies listed in the pubspec.yaml
+flutter pub upgrade --major-versions # the same + upgrade the constraints in the pubspec.yaml
 ```
 
- 
+# New Proj
+```
+In VS Code : Ctrl + Shift + P
+- 
+```
 # Containers
 ```
 Stack                   // permite  uno sobre otro
@@ -127,3 +150,25 @@ provider (gestor de estado) https://pub.dev/packages/provider
 
 # Apis
 - [Movies](https://developers.themoviedb.org/)
+
+# Maps
+> Instructions: https://pub.dev/packages/google_maps_flutter
+- build.gradle
+  ```
+  defaultConfig {
+          minSdkVersion 21
+          ...
+      }
+  ```
+- Get Google Maps Platform Key
+  - Ensure are enabled:
+    - Maps JavaScript API
+    - Maps SDK for Android
+    - Maps SDK for iOS
+
+# Riverpod
+ref.watch(...) // as listener
+ref.read(...)  // as getter (eg. when click in a button)
+
+// use internal method
+ref.read(myProvider.notifier).someMethod();

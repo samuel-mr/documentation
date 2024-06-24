@@ -11,7 +11,9 @@
 - https://www.figma.com/
 - Photoshop lite Web https://www.photopea.com/
 
-
+## Figma Plugins
+- Wireframe designer (create wireframes based on prompts) (free tier)
+- WireGen ()(free tier)
 ## Herramientas de diseño
 - VisBug (Chrome Extension)
 

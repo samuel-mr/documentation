@@ -29,6 +29,8 @@ example
 ```
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+      //// Aditionally: you are able to add this conditional
+      //if (!optionsBuilder.IsConfigured)
       optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=CarflowData");
     }
 ```
@@ -90,6 +92,12 @@ get
 ```
  var connectionString = builder.Configuration["ConnectionStrings:CityInfoDBConnectionString"];
 ````
+## Connection String
+In the connection string may be needed to add:
+```
+// when certification is not trusted
+TrustServerCertificate=true
+```
 
 # Migrations
 - [documentation](https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli#create-the-database)
@@ -114,6 +122,7 @@ get
 - flow
     ```
     dotnet ef migrations add [name] # add new migration  
+    dotnet ef migrations remove     # remove the last one
     dotnet ef database update       # exec last migration
         -v                          # verbose : show details
     ```
@@ -132,6 +141,8 @@ get
       }
       public class HangContext : DbContext
       {
+        // If you need to run Migrations in a Console APP add this empty constructor:
+          public HangContext(){}
           public HangContext(DbContextOptions<HangContext> options) : base(options)
           {}
           public DbSet<Persona> Personas { get; set; }

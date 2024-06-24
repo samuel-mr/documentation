@@ -38,7 +38,7 @@ Operadores
 ```
 ## Methods 
 Parameters
-```
+```dart
 // required
 void run(String parameter)
 
@@ -59,6 +59,16 @@ void run({
     required String first, 
     required String second
   }){
+```
+## late
+Cuando declaras sin inicializar,
+pero aseguras que tendrá valor antes de usarse
+```dart
+late String nombre; // Declaración
 
+void main() {
+  nombre = "Juan"; // Inicialización posterior
+  print(nombre); // Imprime: Juan
+...
 
 ```
