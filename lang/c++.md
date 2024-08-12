@@ -107,3 +107,5 @@ void Clase::metodoNoImplementado()
 }
 
 ```
+HWND -> Handle to a Window : Identificador único para una ventana.  Permite cambiar su título, posición, tamaño o estilo, enviar mensajes por el SO (como click del mouse), etc.
+HINSTANCE -> instance Handle: Identificador único asignado a una instancia en ejecución de una app de Windows. Cuando se ejecuta un app el SO le asigna un HINSTANCE único. Se usa para identificar múltiples instancias de la misma app o entre diferentes apps
