@@ -17,20 +17,52 @@ choco install -y git.install
 choco install -y github-desktop
 choco install -y nvm
 ### choco install -y nodejs ! no more individual installation!
-choco install pyenv-win # python version manager for windows
-###
-# pyenv.bat install 3.5.2
-# pyenv.bat global 3.5.2
-# Win10 or 11 : Disable in : "app execution aliases" / "Pyhon" alias
-# To test if it's working: python -c "import sys; print(sys.executable)"
-#
-# pyenv.bat versions
-###
-# choco install -y python
-  # choco install -y awscli
-  # choco install -y terraform
+
 choco install -y postman
 ```
+### Pyenv
+- Win10 or 11 : Disable in : "app execution aliases" / "Pyhon" alias
+```ps1
+choco install pyenv-win # python version manager for windows
+pyenv.bat update # Good practice, first, update the local list of available versions
+
+pyenv.bat install --list
+pyenv.bat versions # display all installed versions
+
+pyenv.bat install 3.5.2
+pyenv.bat global 3.5.2
+
+pyenv.bat install 3.12.5
+pyenv.bat global 3.12.5
+```
+
+- To test if it's working
+  ```ps1
+  python -c "import sys; print(sys.executable)"
+  ```
+- Configuracion guardada en `pyvenv.cfg`
+
+
+- Create `Env` : In the project's root 
+  ```ps1
+  # Create virtual environment
+  python3 -m venv env
+  # Activate : as result in the console, you should see the name of the env at the beginning
+  .\env\Scripts\activate
+  # Desactivate : will work if it was activated previously
+  deactivate
+  # List all installed package
+  python -m pip list
+  # Install dependencies using txt (con en env activo me funciono usando 'python', no 'python3')
+  python -m pip install -r requirements.txt
+  # Uninstall
+  python -m pip uninstall -r requirements.txt -y
+  # Upgrade (it works only if you don't specify the version of your package)
+  python -m pip install --upgrade -r requirements.txt
+  ```
+- To update a package just change to values in the requirement.txt file and run the pip install...
+
+
 ### Oh-My-Phosh:
 ```ps1
 choco install -y oh-my-posh ## I have test it with powershell 5
@@ -116,6 +148,7 @@ choco install -y cpu-z.install
 choco install -y notion
 choco install -y powertoys
 choco install -y qbittorrent
+choco install -y treesizefree
 
 ```
 # To Complete the setup!
