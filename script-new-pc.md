@@ -19,6 +19,7 @@ choco install -y nvm
 ### choco install -y nodejs ! no more individual installation!
 
 choco install -y postman
+choco install -y offset-explorer # Kafka UI admin
 ```
 ### Pyenv
 - Win10 or 11 : Disable in : "app execution aliases" / "Pyhon" alias
