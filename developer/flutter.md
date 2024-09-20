@@ -33,12 +33,25 @@ flutter pub get       # install current v
 flutter pub outdated  # display outdated libs
 flutter pub upgrade   # To update to the latest compatible versions of all the dependencies listed in the pubspec.yaml
 flutter pub upgrade --major-versions # the same + upgrade the constraints in the pubspec.yaml
+
+## how to update
+flutter pub outdated
+- (for mayor version, modify it manually)
+flutter pub upgrade
+flutter pub get
+flutter pub outdated
 ```
 
 # New Proj
 ```
 In VS Code : Ctrl + Shift + P
 - 
+```
+# Firebase configuration
+```ps1
+npm install -g firebase-tools
+firebase login
+dart pub global activate flutterfire_cli
 ```
 # Containers
 ```

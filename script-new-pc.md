@@ -19,6 +19,8 @@ choco install -y nvm
 ### choco install -y nodejs ! no more individual installation!
 
 choco install -y postman
+choco install -y winscp #transfer files
+# sdkman (see the sdkman.md file)
 ```
 ### Pyenv
 - Win10 or 11 : Disable in : "app execution aliases" / "Pyhon" alias
