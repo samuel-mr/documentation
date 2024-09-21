@@ -19,6 +19,7 @@ choco install -y nvm
 ### choco install -y nodejs ! no more individual installation!
 
 choco install -y postman
+choco install -y offset-explorer # Kafka UI admin
 choco install -y winscp #transfer files
 # sdkman (see the sdkman.md file)
 ```
