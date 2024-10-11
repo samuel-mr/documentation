@@ -1,0 +1,8 @@
+version: '3'
+services:
+  conduktor:
+    image: conduktor/conduktor:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092  # Aquí puedes colocar la URL de tu broker Kafka
