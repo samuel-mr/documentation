@@ -116,7 +116,21 @@
             ```
 
 # Props:
+- New way
+    ```svelte
+    <-- Child component -->
+        <script>
+            // single
+            let single = $props();
+            // multiple
+            let {x, y} = $props<{x:number, y: number}>();
+            // ony one $props could be used
+        </script>
+    <- Parent component->
+        <Nested single={42} />
     ```
+- Old way
+    ```svelte
     <-- Child component -->
         <script>
             export let answer; // also, you could assign a default value
@@ -126,7 +140,7 @@
     ```
 
 - `Spread props` : the prop names need to be equal
-    ```html
+    ```svelte
     <PackageInfo
         name={pkg.name}
         speed={pkg.speed}
@@ -135,6 +149,7 @@
     // OR 
     <PackageInfo {...pkg} />
     ```
+- Pass ar
 # Logic
 - if
     ```html
@@ -232,70 +247,79 @@
             ```
             on:click|once|capture={...} 
             ```
-- Component events : like `export function` ... _but it needs a dispatcher_
-    - Child component
-        ```html
-        <script>
-            import { createEventDispatcher} from 'svelte'
-            const dispatch = createEventDispatcher();
-            
-            function internal_method_from_component() {
-                dispatch('EVENT_NAME', {
-                    CONTENT: 'Hello!'
-                });
-            }
-        </script>
 
-        <button on:click={internal_method_from_component}>
-            Click to say hello
-        </button>
-        ```
-    - Parent component
-        ```html
-        <script>
-            import Inner from './Inner.svelte';
-
-            function handleMessage(event) {
-                alert(event.detail.CONTENT);
-            }
-        </script>
-
-        <Child on:EVENT_NAME={handleMessage} />
-        ```
-    - Event forwarding (shorcut)
-        - Traditional code
-            ```html
+### Callbacks props or compoment events
+- CustomEvent
+    - a) use when need native DOM events or third-party libraries that listen for DOM events
+    - b) use when need event to propagate up the DOM tree, like in form submission that can be handled anywhere in the DOM tree
+    - Example
+        - Child component
+            ```svelte
             <script>
-                import Inner from './Inner.svelte';
-                import {createEventDispatcher} from 'svelte'
-
-                const dispatcher = createEventDispatcher()
+                // Declare the prop
+                let { onColorSelected } = $props<{
+                    color: string;
+                    onColorSelected: (event: CustomEvent<{ selectedColor: string }>) => void;
+                }>();
                 
-                // In this example the handler is just forwarding the same structure
-                function help(event){
-                    dispatcher('message', event.detail)
+                // Declare the handler to call the callback
+                    function handleColorSelect(selectedColor: string) {
+                        onColorSelected(
+                            new CustomEvent<{ selectedColor: string }>('onColorSelected', {
+                                detail: {
+                                    selectedColor: selectedColor
+                                }
+                            })
+                        );
+                    }
+            </script>
+            ```
+        - Parent component
+            ```svelte
+            <ColorPalette color={"some"} onColorSelected={(e) => color = e.detail.selectedColor} />
+            ```
+- Event (simple version)
+    - a) use for direct callback betweehn child-parent
+    - example:
+        - a) child
+            ```svelte
+            <script>
+                let { color, onColorSelected } = $props<{
+                    color: string;
+                    onColorSelected: (selectedColor: string) => void;
+                }>();
+
+                function handleColorSelect(selectedColor: string) {
+                    onColorSelected(  selectedColor		);
                 }
             </script>
-            <Inner on:message={help}/>
             ```
-        - Shortcut (same behavior as above code) 
-            ```html
-            <script>
-                import Inner from './Inner.svelte';
-            </script>
-
-            <Inner on:message/>
+        - b) parent
+            ```svelte
+            <ColorPalette {color} onColorSelected={(selectedColor) => color = selectedColor} />
             ```
     
     - DOM Event forwarding
-        ```html
+        ```svelte
         // Child component: notify the clic event to the parent
-        <button on:click>
+        <button onclick>
             ... 
         // Parent:handle it
-        <BigRedButton on:click={handleClick}
+        <BigRedButton onclick={handleClick}
         ```
-
+- Option params
+    ```svelte
+    <script>
+        let { 
+            message,
+            confirmText = 'Confirm',  // Default value after destructuring
+        } = $props<{
+            message: string;
+            confirmText?: string;     // Optional in type
+        }>();
+    </script>
+    ```
+### Controls
     - Text Input
         ```html
         <input bind:value={texto} />
