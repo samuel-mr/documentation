@@ -103,6 +103,47 @@ I hope this helps! Let me know if you have any other questions.
 ```
 
 
+# Tricks
+- Store a collection of items indexed by string identifiers
+    - Older implementation
+        ```ts
+            private states: { [key: string]: DocumentState };
 
+            constructor() {
+                this.states = {
+                    draft: new DraftState(this),
+                    review: new ReviewState(this),
+                    published: new PublishedState(this)
+                };
+                
+                this.state = this.states.draft;
+            }
 
+            setState(stateName: 'draft' | 'review' | 'published') {
+                this.state = this.states[stateName];
+            }
+        ```
+    - modern syntax `Record`
+        ```ts
+        type CatName = "miffy" | "boris" | "mordred";
+        
+        interface CatInfo {
+        age: number;
+        breed: string;
+        }
+        
+        const cats: Record<CatName, CatInfo> = {
+        miffy: { age: 10, breed: "Persian" },
+        boris: { age: 5, breed: "Maine Coon" },
+        mordred: { age: 16, breed: "British Shorthair" },
+        };
+        
+        cats.boris;
+        ```
 
+- Prevent properties from beign modified
+    ```
+        // Prevent id from being modified
+        const safeUpdates = { ...updates };
+        delete (safeUpdates as any).id;
+    ```

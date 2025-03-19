@@ -117,7 +117,7 @@
 
 # Props:
 - New way
-    ```svelte
+    ```ts
     <-- Child component -->
         <script>
             // single
