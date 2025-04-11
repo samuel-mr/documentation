@@ -116,14 +116,14 @@
             ```
 
 # Props:
-    ```
-    <-- Child component -->
-        <script>
-            export let answer; // also, you could assign a default value
-        </script>
-    <- Parent component->
-        <Nested answer={42} />
-    ```
+```js
+<-- Child component -->
+    <script>
+        export let answer; // also, you could assign a default value
+    </script>
+<- Parent component->
+    <Nested answer={42} />
+```
 
 - `Spread props` : the prop names need to be equal
     ```html

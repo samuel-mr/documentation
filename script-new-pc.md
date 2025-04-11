@@ -22,6 +22,7 @@ choco install -y postman
 choco install -y offset-explorer # Kafka UI admin
 choco install -y winscp #transfer files
 # sdkman (see the sdkman.md file)
+choco install -y k6 # load testing
 ```
 ### Pyenv
 - Win10 or 11 : Disable in : "app execution aliases" / "Pyhon" alias

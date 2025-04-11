@@ -4,7 +4,6 @@
 ```
 dotnet add package microsoft.entityframeworkcore       // prefiero tenerlo explicito
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
-dotnet add package Microsoft.EntityFrameworkCore.Design
 ```
 ## Base
 ```
@@ -80,18 +79,20 @@ builder.Services.AddDbContext<CityInfoContext>(
   );
 ```
 
-## Configuration in Program.cs
-
- in appsettings.json
+in appsettings.json
 ```
  "ConnectionStrings": {
-    "CityInfoDBConnectionString" :  "Data Source=CityInfo.db"
+    # Sqllite
+      "CityInfoDBConnectionString" :  "Data Source=CityInfo.db"
+    # Postgresql
+      "DefaultConnection" :  "Host=localhost;Port=5432;Database=simpleApiDb;Username=user;Password=passs;"
   } 
 ```
-get
+in Program.cs
 ```
  var connectionString = builder.Configuration["ConnectionStrings:CityInfoDBConnectionString"];
 ````
+
 ## Connection String
 In the connection string may be needed to add:
 ```
@@ -132,6 +133,8 @@ TrustServerCertificate=true
       builder.Services.AddDbContext<HangContext>(options =>
       {
           options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+          // for postgresql
+          options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
       });
       ...
       public class Persona
