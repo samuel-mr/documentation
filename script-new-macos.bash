@@ -22,14 +22,26 @@ brew install fzf   # It's an interactive filter program
 brew install ripgrep    # searches directories for a regex pattern while respecting your gitignore
 
 # Pyton tools
-brew install pipx # like nvn for pyton
+brew install pipx # like nvn for python but only for CLI not libs
 pipx ensurepath
+
+## pipx commands:
+<< 'MULTILINE-COMMENT'
+pipx list  # list installed apps with pipx
+pipx run <name> # run without installing
+pipx upgrade <name>
+pipx uninstall <name>
+pipx info <name>
+MULTILINE-COMMENT
+
+# Crate for python
+pipx install uv  # use pipx to be isolated
 
 # App Store
 brew install mas # Mac App Store cli
 mas install 497799835 # Xcode
 
-
+ 
 ## CASKS_____________________-
 # IDE
 brew install --cask visual-studio-code
@@ -70,7 +82,7 @@ brew install --cask freetube
 # on run freetube: run it at first time (or after update)
 ## xattr -d com.apple.quarantine /Applications/FreeTube.app
 
-# containers
+# containers - virtualization
 brew install colima docker docker-compose
 ## colima start --memory 4
 
@@ -80,3 +92,6 @@ brew install --cask font-jetbrains-mono
 
 # sec
 brew install --casks protonvpn
+
+# games - win emulation
+## porting kit
