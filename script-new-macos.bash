@@ -59,7 +59,8 @@ brew install --cask figma
 # navigators
 brew install --cask google-chrome
 brew install --cask firefox
-brew install --cask arc   
+brew install --cask arc
+brew install --cask duckduckgo
 
 # cli
 brew install --cask warp 
@@ -92,6 +93,7 @@ brew install --cask font-jetbrains-mono
 
 # sec
 brew install --casks protonvpn
+brew install --cask qbittorrent
 
 # games - win emulation
 ## porting kit
