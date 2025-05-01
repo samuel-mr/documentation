@@ -95,5 +95,8 @@ brew install --cask font-jetbrains-mono
 brew install --casks protonvpn
 brew install --cask qbittorrent
 
+# chat
+brew install --cask telegram
+
 # games - win emulation
 ## porting kit
