@@ -14,7 +14,7 @@ brew install wget
 brew install curl
 brew install tree
 brew install go
-brew install nvm
+brew install nvm # it need to run additional comands shown onto console
 brew install pnpm
 
 brew install jq    # https://jqlang.org/tutorial/
