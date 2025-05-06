@@ -100,3 +100,6 @@ brew install --cask telegram
 
 # games - win emulation
 ## porting kit
+
+# Others
+## BalenaEtcher : to create usb bootable
