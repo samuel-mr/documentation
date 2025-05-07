@@ -76,7 +76,11 @@ brew install --cask vlc
 brew install --cask altserver  # load apps into iPhone without App Store
 brew install --cask breaktimer # pomodoro
 
-# miselaneous
+# maintenance
+brew install --cask grandperspective # like treesize
+brew install --cask omnidisksweeper  # as list
+
+# entertainment
 brew install --cask spotify
 brew install --cask whatsapp
 brew install --cask freetube
