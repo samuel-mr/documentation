@@ -22,6 +22,7 @@ choco install -y postman
 choco install -y offset-explorer # Kafka UI admin
 choco install -y winscp #transfer files
 # sdkman (see the sdkman.md file)
+# jabba (install manually): https://github.com/shyiko/jabba
 choco install -y k6 # load testing
 choco install -y jetbrainstoolbox
 ```
