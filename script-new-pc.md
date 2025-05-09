@@ -26,6 +26,18 @@ choco install -y winscp #transfer files
 choco install -y k6 # load testing
 choco install -y jetbrainstoolbox
 ```
+- Configure jabba (instead of sdkman)
+  ```bash
+  # Path -> C:\Users\<USER_NAME>\.jabba\jdk\
+  # list
+  jabba ls-remote
+  # list local
+  jabba ls
+  jabba install openjdk@1.17.0
+  jabba use openjdk@1.17.0
+  jabba alias default openjdk@1.17.0
+
+  ```
 ### Pyenv
 - Win10 or 11 : Disable in : "app execution aliases" / "Pyhon" alias
 ```ps1
