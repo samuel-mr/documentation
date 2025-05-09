@@ -196,3 +196,12 @@ choco clean
 
 # Mensaje final
 Write-Host "Instalación completada. Por favor, reinicia tu computadora para completar el proceso."
+
+# Manual installation
+```
+# win11 customization
+winaerotweaker #many options for UI and behavior
+O&O ShoutUp 10 ++  # privacy configurations
+
+
+```
