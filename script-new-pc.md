@@ -7,6 +7,10 @@
 # Actualizar Chocolatey
 choco upgrade chocolatey
 
+# WinGet
+```ps1
+ winget install WhatsApp
+```
 # Desarrollo - Herramientas de Desarrollo
 ```ps1
 choco install -y googlechrome
