@@ -83,6 +83,8 @@ brew install --cask omnidisksweeper  # as list
 # entertainment
 brew install --cask spotify
 brew install --cask whatsapp
+brew install ffmpeg # dependency for yt-dlp
+brew install yt-dlp  # download yt videos
 brew install --cask freetube
 # on run freetube: run it at first time (or after update)
 ## xattr -d com.apple.quarantine /Applications/FreeTube.app
