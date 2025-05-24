@@ -173,6 +173,11 @@ choco install -y qbittorrent
 choco install -y treesizefree
 
 ```
+# Utilidadoes (manualy)
+```
+Keystroke display (for tutorials)
+https://github.com/bfritscher/carnac
+```
 # To Complete the setup!
 ```ps1
 choco install -y sysinternals
