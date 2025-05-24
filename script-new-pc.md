@@ -19,7 +19,7 @@ choco install -y vscode
 choco install -y git.install
 #choco install -y poshgit
 choco install -y github-desktop
-choco install -y nvm
+#####choco install -y nvm (currently not working) instead use -> https://github.com/coreybutler/nvm-windows/releases
 ### choco install -y nodejs ! no more individual installation!
 
 choco install -y postman
