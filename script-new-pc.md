@@ -177,6 +177,7 @@ choco install -y treesizefree
 ```
 Keystroke display (for tutorials)
 https://github.com/bfritscher/carnac
+*/
 ```
 # To Complete the setup!
 ```ps1
