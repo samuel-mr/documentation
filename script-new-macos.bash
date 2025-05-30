@@ -37,6 +37,16 @@ MULTILINE-COMMENT
 # Crate for python
 pipx install uv  # use pipx to be isolated
 
+## uV commands:
+<< 'MULTILINE-COMMENT'
+uv python install 3.12
+uv python pin 3.12
+uv python list
+uv python dir
+
+MULTILINE-COMMENT
+
+
 # App Store
 brew install mas # Mac App Store cli
 mas install 497799835 # Xcode
