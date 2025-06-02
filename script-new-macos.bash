@@ -15,6 +15,21 @@ brew install curl
 brew install tree
 brew install go
 brew install nvm # it need to run additional comands shown onto console
+<< 'MULTILINE-COMMENT'
+// Add nvm to env
+nano ~/.zshrc
+
+// copy
+export NVM_DIR="$HOME/.nvm"
+export NVM_SYMLINK_CURRENT=true
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # Carga nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # Autocompletado
+
+// restart
+source ~/.zshrc
+
+MULTILINE-COMMENT
+
 brew install pnpm
 
 brew install jq    # https://jqlang.org/tutorial/
