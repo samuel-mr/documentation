@@ -154,6 +154,10 @@ choco install -y blender
 choco install -y paint.net
 choco install -y davinci-resolve
 ```
+# 3d
+```
+# https://www.pureref.com    # to organize images
+```
 
 # Utilidades - Herramientas de Productividad y Utilidades
 ```ps1
