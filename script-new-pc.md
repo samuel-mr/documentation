@@ -181,6 +181,8 @@ choco install -y treesizefree
 ```
 Keystroke display (for tutorials)
 https://github.com/bfritscher/carnac
+Firewall
+https://safing.io/
 */
 ```
 # To Complete the setup!
