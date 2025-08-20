@@ -59,7 +59,18 @@ choco install -y jetbrainstoolbox
   jabba alias default openjdk@1.17.0
 
   ```
-### Pyenv
+
+### Python Launcher (py.exe) temporal replace for Pyenv
+```ps1
+winget install --id Python.Python.3.10 -e
+winget install --id Python.Python.3.12 -e
+py -3.12
+py --list
+
+pip3 install instaloader
+instaloader --no-captions -- -XXXXXXX
+``` 
+### Pyenv (in windows 11 it has some issues in Agust '25...)
 - Win10 or 11 : Disable in : "app execution aliases" / "Pyhon" alias
 ```ps1
 choco install pyenv-win # python version manager for windows
