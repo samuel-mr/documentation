@@ -47,7 +47,7 @@ choco install -y winscp #transfer files
 choco install -y k6 # load testing
 choco install -y jetbrainstoolbox
 ```
-- Configure jabba (instead of sdkman)
+- Configure jabba (DEPRECATED)
   ```bash
   # Path -> C:\Users\<USER_NAME>\.jabba\jdk\
   # list
@@ -58,6 +58,25 @@ choco install -y jetbrainstoolbox
   jabba use openjdk@1.17.0
   jabba alias default openjdk@1.17.0
 
+  ```
+  
+  ```
+- Configure scoop pkm (new JAVA Admin)
+  ```bash
+    
+  # run as normal user
+  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+  irm get.scoop.sh | iex
+
+  # Path -> C:\Users\sam_c\scoop\apps\openjdkXXX ...
+  scoop bucket add java
+  scoop install openjdk17
+   # scoop search openjdk
+   # scoop install temurin17
+   # scoop reset openjdk17  // update PATH + JAVA_HOME
+  
+  java --version
+  javac --version
   ```
 
 ### Python Launcher (py.exe) temporal replace for Pyenv
