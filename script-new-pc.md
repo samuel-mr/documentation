@@ -222,7 +222,7 @@ choco install -y notion
 choco install -y powertoys
 choco install -y qbittorrent
 choco install -y treesizefree
-
+choco install -y grepWin
 ```
 # Utilidadoes (manualy)
 ```
