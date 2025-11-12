@@ -260,6 +260,7 @@ Write-Host "Instalación completada. Por favor, reinicia tu computadora para com
 ```
 # win11 customization
 winaerotweaker #many options for UI and behavior
+https://ninite.com/ #create apps installe
 O&O ShoutUp 10 ++  # privacy configurations
 
 
