@@ -262,6 +262,7 @@ Write-Host "Instalación completada. Por favor, reinicia tu computadora para com
 winaerotweaker #many options for UI and behavior
 https://ninite.com/ #create apps installe
 O&O ShoutUp 10 ++  # privacy configurations
-
+# win 11 optimizer
+https://github.com/hellzerg/optimizer
 
 ```
