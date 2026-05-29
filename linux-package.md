@@ -1,0 +1,1 @@
+- https://github.com/burntsushi/ripgrep : recursively searches directories for a regex pattern while respecting your gitignore
